@@ -962,20 +962,7 @@
 
           <div class="mt-6">
             <h3 class="font-semibold mb-2">🧭 Parcours composés (vue globale)</h3>
-            <div class="overflow-x-auto rounded-lg border">
-              <table class="w-full text-sm">
-                <thead class="bg-gray-50">
-                  <tr>
-                    <th class="px-4 py-2 text-left">Parcours</th>
-                    <th class="px-4 py-2 text-left">Coût global</th>
-                    <th class="px-4 py-2 text-left">Intentions liées (coût par intention)</th>
-                    <th class="px-4 py-2 text-left">Objectif</th>
-                    <th class="px-4 py-2 text-left">Contenu</th>
-                  </tr>
-                </thead>
-                <tbody id="table-pathways" class="divide-y"></tbody>
-              </table>
-            </div>
+            <div id="table-pathways" class="space-y-4"></div>
           </div>
         </div>
       </div>
@@ -1674,17 +1661,33 @@
           const linked = (p.intentionIds||[]).map(id=> PLAN.courses.find(c=>c.id===id)).filter(Boolean);
           const globalCost = linked.reduce((sum, course)=> sum + computeCost(course), 0);
           const linkedHtml = linked.length
-            ? linked.map((c, i)=>`<div class="${i<linked.length-1?'mb-1 pb-1 border-b border-gray-100':''}"><span class="text-indigo-500 mr-1">🔗</span><span class="font-medium text-gray-800">${escapeHtml(c.title)}</span><span class="text-xs text-gray-500 ml-1">${computeCost(c).toFixed(2)}€</span></div>`).join('')
-            : '<span class="text-gray-400">—</span>';
+            ? linked.map((c, i)=>`<div class="${i<linked.length-1?'mb-2 pb-2 border-b border-gray-100':''}"><span class="text-indigo-500 mr-1">🔗</span><span class="font-medium text-gray-800">${escapeHtml(c.title)}</span><span class="text-xs text-gray-500 ml-1">${computeCost(c).toFixed(2)}€</span></div>`).join('')
+            : '<span class="text-gray-400">Aucune intention liée.</span>';
 
-          return `<tr>
-            <td class="px-4 py-2 font-medium text-gray-900">${escapeHtml(p.name || 'Parcours sans nom')}<div class="text-xs text-gray-500 mt-1">${linked.length} intention(s) liée(s)</div></td>
-            <td class="px-4 py-2"><span class="inline-flex items-center px-2 py-1 rounded-full bg-indigo-50 text-indigo-700 font-semibold">${globalCost.toFixed(2)}€</span></td>
-            <td class="px-4 py-2">${linkedHtml}</td>
-            <td class="px-4 py-2">${escapeHtml(p.objectif || '—')}</td>
-            <td class="px-4 py-2">${escapeHtml(p.contenu || '—')}</td>
-          </tr>`;
-        }).join('') || '<tr><td colspan="5" class="px-4 py-3 text-sm text-gray-400">Aucun parcours composé.</td></tr>';
+          return `<div class="rounded-xl border bg-white p-4">
+            <div class="flex flex-wrap items-start justify-between gap-3">
+              <div>
+                <div class="font-semibold text-gray-900">${escapeHtml(p.name || 'Parcours sans nom')}</div>
+                <div class="text-xs text-gray-500 mt-1">${linked.length} intention(s) dans ce parcours</div>
+              </div>
+              <div class="text-right text-xs text-gray-500">Objectif</div>
+            </div>
+
+            <div class="mt-2 text-sm text-gray-700">${escapeHtml(p.objectif || '—')}</div>
+            <div class="mt-3 text-right text-xs text-gray-500">Contenu</div>
+            <div class="mt-1 text-sm text-gray-700">${escapeHtml(p.contenu || '—')}</div>
+
+            <div class="mt-4 rounded-lg border bg-gray-50 p-3">
+              <div class="text-xs font-medium text-gray-600 mb-2">Intentions du parcours</div>
+              ${linkedHtml}
+            </div>
+
+            <div class="mt-3 border-t pt-3 flex items-center justify-between">
+              <span class="text-sm font-semibold text-gray-700">Total du parcours</span>
+              <span class="inline-flex items-center px-2 py-1 rounded-full bg-indigo-50 text-indigo-700 font-semibold">${globalCost.toFixed(2)}€</span>
+            </div>
+          </div>`;
+        }).join('') || '<div class="px-4 py-3 text-sm text-gray-400 rounded-lg border bg-white">Aucun parcours composé.</div>';
       }
 
       // Charts
