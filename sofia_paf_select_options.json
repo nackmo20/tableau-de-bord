@@ -1,0 +1,3618 @@
+{
+  "DISPOSITIF": {
+    "Gdisp_co_them": {
+      "id": "Gdisp_co_them",
+      "name": "Gdisp[co_them]",
+      "label": "Code du thème",
+      "disabled": false,
+      "options": [
+        {
+          "value": "",
+          "label": "Faire un choix",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "AAAA",
+          "label": "A.1.1.1.1 PES 1D",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "AAAB",
+          "label": "A.1.1.1.2 PES TEMPS COMPLET 1D",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "AAAC",
+          "label": "A.1.1.1.3 PES ENSEIGNEMENT PRIVE 1D",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "AABA",
+          "label": "A.1.1.2.1 PEES PUBLICS",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "AABB",
+          "label": "A.1.1.2.2 PEES PUBLICS TEMPS COMPLETS",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "AAC",
+          "label": "A.1.1.3 ENS. DETACHEMENT  RECONVERSION DISC.",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "AADA",
+          "label": "A.1.1.4.1 SPA 1D - 2D",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "AADB",
+          "label": "A.1.1.4.2 STAR 1D - 2D",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "AADC",
+          "label": "A.1.1.4.3 AED PRE-PROFESSIONALISATION",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "AAEA",
+          "label": "A.1.1.5.1 ENSEIGNANTS NEO TITULAIRES 1D",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "AAEB",
+          "label": "A.1.1.5.2 ENSEIGNANTS NEO TITULAIRES 2D",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "AAEC",
+          "label": "A.1.1.5.3 ENSEIGNANTS CONTRACTUELS",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "AAFA",
+          "label": "A.1.1.6.1 ENSEIGNANTS CONTRACTUELS 1D",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "AAFB",
+          "label": "A.1.1.6.2 ENSEIGNANTS CONTRACTUELS 2D",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "ABA",
+          "label": "A.1.2.1 ADAP A L'EMPLOI DES SECRETAIRES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "ABB",
+          "label": "A.1.2.2 ADAP A L'EMPLOI DES SG EPLE ET AGENTS COMPTABLES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "ABC",
+          "label": "A.1.2.3 ADAPA L EMPLOI DES ACTEURS RH",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "ABD",
+          "label": "A.1.2.4 ADAP L EMPLOI DES PERSONNELS DEC",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "ABE",
+          "label": "A.1.2.5 ADAP A L EMPLOI DES AGENTS DE LABORATOIRE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "ABF",
+          "label": "A.1.2.6 ADAP A L EMPLOI PERS SERVICES DECONCENTRES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "ACA",
+          "label": "A.1.3.1 MEDECINS",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "ACB",
+          "label": "A.1.3.2 INFIRMIERS",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "ACC",
+          "label": "A.1.3.3 ASSISTANTS SOCIAUX",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "ADA",
+          "label": "A.1.4.1 AED",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "ADB",
+          "label": "A.1.4.2 PSY EN EDO EDA",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "ADC",
+          "label": "A.1.4.3 ADAPTATION A L EMPLOI PERSONNELS AESH",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "ADD",
+          "label": "A.1.4.4 ASSISTANTS DE LANGUE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "AEA",
+          "label": "A.1.5.1 FORMATION STATUTAIRE ENCADREMENT PEDAGO",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "AEB",
+          "label": "A.1.5.2 ENCADREMENT ADMINISTRATIF",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "AEC",
+          "label": "A.1.5.3 PERSONNELS ENCADREMENT FAISANT FONCTION",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "AFA",
+          "label": "A.1.6.1 ASSISTANTS DE PREVENTION",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "AFB",
+          "label": "A.1.6.2 MEMBRES DE COMITE SOC ET ECO CSE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "AFC",
+          "label": "A.1.6.3 RESP. DU BUREAU DES ENTREPRISES EN LY",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "AGA",
+          "label": "A.1.7.1 CULTURE JURIDIQUE ET FONTX DE LA FONC. PU.",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "AGB",
+          "label": "A.1.7.2 DROITS ET DEVOIRS DE L AGENT PUBLIC",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "AGC",
+          "label": "A.1.7.3 LES TROIS FONCTIONS PUBLIQUES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "AGD",
+          "label": "A.1.7.4 CONNAISSANCE DU SYSTEME EDUCATIF",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "AGE",
+          "label": "A.1.7.5 ENVIRONNEMENT PROFESSIONNEL",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BBBB",
+          "label": "B.1.1.1.1 PRINCIPES ET VALEURS DU SERVICE PUBLIC +",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BBBC",
+          "label": "B.1.1.1.2 LUTTE CONTRE LES DISCRIMINATIONS",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BBBD",
+          "label": "B.1.1.1.3 LAICITE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BBBE",
+          "label": "B.1.1.1.4 EGALITE FEMME HOMME",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BBBF",
+          "label": "B.1.1.1.5 DIVERSITE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BBBG",
+          "label": "B.1.1.1.6 MODERNISATION DU SERVICE PUBLIC",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BBCB",
+          "label": "B.1.1.2.1 SANTE ECOLOGIQUE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BBCC",
+          "label": "B.1.1.2.2 DEVELOPPEMENT DURABLE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BBCD",
+          "label": "B.1.1.2.3 SOBRIETE NUMERIQUE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BBDB",
+          "label": "B.1.1.3.1 HYGIENE, SANTE ET SECURITE AU TRAVAIL",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BBDC",
+          "label": "B.1.1.3.2 PREVENTION DES RISQUES PSYCHOSO.",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BBDD",
+          "label": "B.1.1.3.3 GESTION DES RELATIONS ET COM PRO",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BBDE",
+          "label": "B.1.1.3.4 LUTTE CONTRE LE HARCELEMENT",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BBDF",
+          "label": "B.1.1.3.5 PREVENTION ET GESTION DE CRISE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BBEB",
+          "label": "B.1.1.4.1 COMPETENCES NUM. PRO. DES AGENTS",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BBEC",
+          "label": "B.1.1.4.2 SECURITE REGULATION DE L ESPACE NUM.",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BBED",
+          "label": "B.1.1.4.3 IA : PRATIQUES ET USAGES PROF.",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BBEE",
+          "label": "B.1.1.4.4 ACCESSIBILITE NUMERIQUE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BBFB",
+          "label": "B.1.1.5.1 COOPERATION LES DYNAMIQUES RESEAUX",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BBFC",
+          "label": "B.1.1.5.2 CO.DE L ENTREPRISE PARTENARIATS",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BBFD",
+          "label": "B.1.1.5.3 OUV EUROPEENNE ET INTERNATIONALE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BBFE",
+          "label": "B.1.1.5.4 INNO RECHERCHE ET DEVELOPPEMENT",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BCBA",
+          "label": "B.1.2.1.1 DEMOTIVATION & DECROCHAGE SCOLAIRE.",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BCBB",
+          "label": "B.1.2.1.2 AUTONOMIE ET TRAVAIL PERSO DE L ELEVE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BCBC",
+          "label": "B.1.2.1.3 EDUCATION PRIORITAIRE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BCBD",
+          "label": "B.1.2.1.4 DISPOSITIFS D AIDES AUX ELEVES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BCBE",
+          "label": "B.1.2.1.5 ELEVES ALLOPHONES ET NOUV ARRIVES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BCBF",
+          "label": "B.1.2.1.6 ELEVES EN GRDES DIFFICULT. DAPPRENTISS.",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BCCA",
+          "label": "B.1.2.2.1 CONCEPTION UNIV APPRENTISSAGES CUA",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BCCB",
+          "label": "B.1.2.2.2 STAGE MIN",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BCCC",
+          "label": "B.1.2.2.3 FORMATION CONTINUE DES ENS. SPE ASH",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BCDA",
+          "label": "B.1.2.3.1 EDUCATION MEDIAS INFORMATION EMI",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BCDB",
+          "label": "B.1.2.3.2 LUTTE CONTRE LES DISCRIMINATIONS",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BCDC",
+          "label": "B.1.2.3.3 MEMOIRE ET CITOYENNETE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BCDE",
+          "label": "B.1.2.3.4 DEFENSE - CLASSES ENGAGEES SNU",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BCDF",
+          "label": "B.1.2.3.5 EDUCATION AU DEV DURABLE EDD",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BCEA",
+          "label": "B.1.2.4.1 PARCOURS EDUCATIF DE SANTE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BCEB",
+          "label": "B.1.2.4.2 EDUC.VIE RELATIO. AFFECT.ET SEXUELLE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BCEC",
+          "label": "B.1.2.4.3 PREVENTION DE LA SANTE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BCED",
+          "label": "B.1.2.4.4 COMPETENCES PSYCHO-SOCIALES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BCEF",
+          "label": "B.1.2.4.5 LUTTE CONTRE LE HARCELEMENT",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BCFA",
+          "label": "B.1.2.5.1 PEDAGOGIE DE L'ORIENTATION",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BCFB",
+          "label": "B.1.2.5.2 CONTINUUM -5 + 3",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BCFC",
+          "label": "B.1.2.5.3 RELATION ECOLE-ENTREPRISE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BCGA",
+          "label": "B.1.2.6.1 PREAC",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BCGB",
+          "label": "B.1.2.6.2 COLLEGE AU CINEMA",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BCGC",
+          "label": "B.1.2.6.3 LYCEE AU CINEMA",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BCGD",
+          "label": "B.1.2.6.3 AUTRES DISPOSITIFS EAC",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDAA",
+          "label": "B.1.3.1.1 DISCIPLINAIRE ARTS",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDAB",
+          "label": "B.1.3.1.2 DISCIPLINAIRE ENS-DOCUMENTALISTE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDAC",
+          "label": "B.1.3.1.3 DISCIPLINAIRE EPS",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDAD",
+          "label": "B.1.3.1.4 DISCIPLINAIRE HISTOIRE-GEOGRAPHIE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDAE",
+          "label": "B.1.3.1.5 DISCIPLINAIRE LANGUES VIVANTES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDAF",
+          "label": "B.1.3.1.6 DISCIPLINAIRE HLP",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDAG",
+          "label": "B.1.3.1.7 DISCIPLINAIRE LETTRES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDAH",
+          "label": "B.1.3.1.8 DISCIPLINAIRE FILIERES TECHNOLOGIQUES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDAI",
+          "label": "B.1.3.1.9 DISCIPLINAIRE PHILOSOPHIE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDAJ",
+          "label": "B.1.3.1.10 DISCIPLINAIRE MATHS",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDAK",
+          "label": "B.1.3.1.11 DISCIPLINAIRE SCIENCES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDAL",
+          "label": "B.1.3.1.12 DISCIPLINAIRE SES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDBA",
+          "label": "B.1.3.2.1 TRANSVERSAL METIERS VP",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDBB",
+          "label": "B.1.3.2.2 EG-HOTELLERIE RESTAURATION",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDBC",
+          "label": "B.1.3.2.3 EG-RELATION CLIENT",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDBD",
+          "label": "B.1.3.2.4 EGTRANSPORT/LOGIST/SECPREV/ECOGEST/ECODR",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDBE",
+          "label": "B.1.3.2.5 EG-ALIMENTATION/GEST.ADMIN",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDBF",
+          "label": "B.1.3.2.6 SBSSA-SOCIALES BIEN ETRE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDBG",
+          "label": "B.1.3.2.7 SBSSA-SANITAIRE HYGIENE EGPA",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDBH",
+          "label": "B.1.3.2.8 STI-AUTOMOBILE...",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDBI",
+          "label": "B.1.3.2.9 STI-ELECT.PHOTONIQUE...",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDBJ",
+          "label": "B.1.3.2.10 STI-CUIR MODE CHAUDRONNERIE...",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDBK",
+          "label": "B.1.3.2.11 STI-BATIMENT...",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDBL",
+          "label": "B.1.3.2.12 STI-MAT.PLASTIQUES COMPOSITE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDBM",
+          "label": "B.1.3.2.13 STI-BOIS-TRAVAUX PUBLICS...",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDBN",
+          "label": "B.1.3.2.14 STI-.GENIE THERM.ET MECAN.HORTIC....",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDBO",
+          "label": "B.1.3.2.15 STI-DISCIPLINAIRE ARTS APP. VP",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDBP",
+          "label": "B.1.3.2.16 STI-FORMATION TRANSVERSALE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDBQ",
+          "label": "B.1.3.2.17 DISCIPLINAIRE MATHS-SCIENCES VP",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDBR",
+          "label": "B.1.3.2.18 DISCIPLINAIRE LETTRES-HG VP",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDBS",
+          "label": "B.1.3.2.19 DISCIPLINAIRE LETTRES-LANGUES VP",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDBT",
+          "label": "B.1.3.2.20 FORMATION CONTINUE DES DDFPT",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDBU",
+          "label": "B.1.3.2.21 ENSEIGNER LA SANTE SECURITE AU TRAVAIL",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDC",
+          "label": "B.1.3.3 ENSEIGNEMENT SUPERIEUR",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDDA",
+          "label": "B.1.3.4.1 EVALUATION DIFFERENCIATION PEDAGOGIQUE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDDB",
+          "label": "B.1.3.4.2 COMPETENCES LANGAGIERES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDDC",
+          "label": "B.1.3.4.3 APPORTS DE LA RECHERCHE ET APPRENTISSAGE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDDE",
+          "label": "B.1.3.4.4 NUMERIQUE PEDA. DANS LES APPRENTISSAGES",
+          "group": "",
+          "selected": true
+        },
+        {
+          "value": "BDEA",
+          "label": "B.1.3.5.1 FORMATION CONTINUE DES CPE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDEB",
+          "label": "B.1.3.5.2 FORMATION CONTINUE DES AED",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDEC",
+          "label": "B.1.3.5.3 FORMATION CONTINUE DES AESH",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDED",
+          "label": "B.1.3.5.4 FORMATION CONTINUE DES PSY EN",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDFA",
+          "label": "B.1.3.6.1 PLAN FRANCAIS",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDFB",
+          "label": "B.1.3.6.2 PLAN MATHEMATIQUES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDFC",
+          "label": "B.1.3.6.3 EVALUATION D ECOLE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDFD",
+          "label": "B.1.3.6.4 ANIMATION PEDAGOGIQUE EN RESIDENCE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDFE",
+          "label": "B.1.3.6.5 MATERNELLE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDFF",
+          "label": "B.1.3.6.6 FORMATION CONTINUE DES DIR. ECOLE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDGA",
+          "label": "B.1.3.7.1 COMPETENCES REDACTIONNELLES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDGB",
+          "label": "B.1.3.7.2 OUTILS BUREAUTIQUES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDGC",
+          "label": "B.1.3.7.3 FONCTION FINANCIERE ET COMPTABLE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDGD",
+          "label": "B.1.3.7.4 FONCTION RH",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDGE",
+          "label": "B.1.3.7.5 FONCTION EXAMEN ET CONCOURS",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDGF",
+          "label": "B.1.3.7.6 AUTRES PERSONNELS ADMINISTRATIFS",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDHA",
+          "label": "B.1.3.8.1 FOR CONTINUE INTERCAT. PERS. SOC SANTE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDHB",
+          "label": "B.1.3.8.2 FORMATION CONTINUE INFIRMIER",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDHC",
+          "label": "B.1.3.8.3 FORMATION CONTINUE MEDECIN",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDHD",
+          "label": "B.1.3.8.4 FORMATION CONTINUE ASSISTANT SOCIAL",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDIA",
+          "label": "B.1.3.9.1 FORMATION CONTINUE DES AGENTS DE LABO",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDIB",
+          "label": "B.1.3.9.2 FOR CONTINUE DES AGENTS SERVICES INFO",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDIC",
+          "label": "B.1.3.9.3 FORCONTINUE AUTRES PERSONNELS TECH",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDJA",
+          "label": "B.1.3.10.1 COMPETENCES MANAGERIALES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDJB",
+          "label": "B.1.3.10.2 DIALOGUE SOCIAL",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDJC",
+          "label": "B.1.3.10.3 FORMATION TRANSITIONS PRO.",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDJD",
+          "label": "B.1.3.10.4 OUTILS METIERS",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDJE",
+          "label": "B.1.3.10.5 CONDUITE DU CHANGEMENT",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BDJF",
+          "label": "B.1.3.10.6 PILOTAGE PEDAGOGIQUE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BEA",
+          "label": "B.1.4.1 COORDINATION DE LA FORMATION",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "BEB",
+          "label": "B.1.4.2 ENTRETIENS DANS LE CADRE DU DAME",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "CAAA",
+          "label": "C.1.1.1.1 PREPARATION AGREGATION INTERNE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "CAAB",
+          "label": "C.1.1.1.2 PREPARATION CAPES INTERNE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "CAB",
+          "label": "C.1.1.2 CONCOURS ADMINISTRATIF & TECHNICIEN",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "CAC",
+          "label": "C.1.1.3 CONCOURS SANTE & SOCIAL",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "CAD",
+          "label": "C.1.1.4 CONCOURS ENCADREMENT PEDAGOGIQUE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "CBAA",
+          "label": "C.1.2.1.1 PARCOURS PREPARATION CAPPEI",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "CBAB",
+          "label": "C.1.2.1.2 VAEP CAPPEI",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "CBB",
+          "label": "C.1.2.2 DDEEAS",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "CBC",
+          "label": "C.1.2.3 PARCOURS PREPARATION CPLDS",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "CCAA",
+          "label": "C.1.3.4.1 PACD/PPR/ MOBILITE/EVOLUTION PROFESSIONNELLE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "CCB",
+          "label": "C.1.3.2 AGIR POUR SON EVOLUTION PRO",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "CCC",
+          "label": "C.1.3.3 ACCOMPAGNEMENT MAE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "CCD",
+          "label": "C.1.3.4 UTILISER SON CPF",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "DAA",
+          "label": "D.1.1.1 PARCOURS PREPARATION CAFFA",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "DAB",
+          "label": "D.1.1.2 PARCOURS PREPARATION CAFIPEMF",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "DBA",
+          "label": "D.1.2.1 FONDAMENTAUX DU FORMATEUR",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "DBB",
+          "label": "D.1.2.2 APPRO. DES COMPETENCES DU FORMATEUR",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "DBC",
+          "label": "D.1.2.3 COLLECTIFS PROFESSIONNELS APPRENANTS",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "DBD",
+          "label": "D.1.2.4 RECHERCHE ET INNO POUR LA FORMATION",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "DCA",
+          "label": "D.1.3.1 FORMATION DES ACCOMPAGNATEURS (CARDIE...)",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "DCB",
+          "label": "D.1.3.2 FORMATION DES REFERENTS DU D.A.M.E",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "DCC",
+          "label": "D.1.3.3 FORMATION DES MENTORS",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "DDA",
+          "label": "D.1.4.1 FONDTX DU TUTORAT",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "DDB",
+          "label": "D.1.4.2 APPROF DES COMPETENCES DU TUTEUR",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "DEA",
+          "label": "D.1.5.1 ETRE MEMBRE D'UN JURY DE VAE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "DEB",
+          "label": "D.1.5.2 ETRE MEMBRE D'UN JURY DE CONCOURS",
+          "group": "",
+          "selected": false
+        }
+      ],
+      "display_label": "Code du thème"
+    },
+    "Gdisp_type_paf": {
+      "id": "Gdisp_type_paf",
+      "name": "Gdisp[type_paf]",
+      "label": "Type PAF",
+      "disabled": true,
+      "options": [
+        {
+          "value": "",
+          "label": "Faire un choix",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "2D",
+          "label": "Second degré",
+          "group": "",
+          "selected": true
+        },
+        {
+          "value": "ADM",
+          "label": "Administratif",
+          "group": "",
+          "selected": false
+        }
+      ],
+      "display_label": "Type PAF"
+    },
+    "Gdisp_co_tpla": {
+      "id": "Gdisp_co_tpla",
+      "name": "Gdisp[co_tpla]",
+      "label": "Type de plan",
+      "disabled": false,
+      "options": [
+        {
+          "value": "",
+          "label": "Faire un choix",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "P",
+          "label": "FORMATION 1ER DEGRE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "S",
+          "label": "FORMATION 2ND DEGRE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "A",
+          "label": "FORMATION ATSS",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "E",
+          "label": "FORMATION ENCADREMENT",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "C",
+          "label": "FORMATION INTERCATEGORIELLE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "D",
+          "label": "FORMATION INTERDEGRE",
+          "group": "",
+          "selected": false
+        }
+      ],
+      "display_label": "Type de plan"
+    },
+    "Gdisp_co_tcan": {
+      "id": "Gdisp_co_tcan",
+      "name": "Gdisp[co_tcan]",
+      "label": "Type de candidature",
+      "disabled": true,
+      "options": [
+        {
+          "value": "",
+          "label": "Faire un choix",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "1",
+          "label": "AVEC CANDIDATURE INDIVIDUELLE",
+          "group": "",
+          "selected": true
+        },
+        {
+          "value": "2",
+          "label": "AVEC CANDIDATURE COLLECTIVE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "3",
+          "label": "PUBLIC DESIGNE",
+          "group": "",
+          "selected": false
+        }
+      ],
+      "display_label": "Type de candidature"
+    },
+    "Gdisp_co_objt": {
+      "id": "Gdisp_co_objt",
+      "name": "Gdisp[co_objt]",
+      "label": "Objectif de formation",
+      "disabled": false,
+      "options": [
+        {
+          "value": "",
+          "label": "Faire un choix",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "35",
+          "label": "ACCOMPAGNEMENT AU BILAN DE CARRIERE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "26",
+          "label": "ACCOMPAGNEMENT AUX BILANS DE C0MPETENCES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "28",
+          "label": "ACCOMPAGNEMENT CONGES DE FORMATION",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "29",
+          "label": "ACCOMPAGNEMENT RAEP",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "27",
+          "label": "ACCOMPAGNEMENT VAE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "23",
+          "label": "ADAPTATION A EVOLUTION PREVISIBLE DES METIERS",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "22",
+          "label": "ADAPTATION IMMEDIATE AU POSTE DE TRAVAIL",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "34",
+          "label": "CONCEPTION ET ORGANISATION DE LA FORMATION",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "24",
+          "label": "DEVELOPT DES QUALIFICATIONS OU ACQUIS. NVELLES",
+          "group": "",
+          "selected": true
+        },
+        {
+          "value": "33",
+          "label": "DEVT COMPETENCES LIEES ACTIVITES FORMATION",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "32",
+          "label": "ELABORATION DE RESSOURCES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "99",
+          "label": "FONCTIONNEMENT",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "30",
+          "label": "FORMATION DIPLOMANTE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "21",
+          "label": "FORMATION PROFESSIONNELLE STATUTAIRE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "31",
+          "label": "PERIODE PROFESSIONNALISATION (2NDE CARRIERE ...)",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "25",
+          "label": "PREPARATION AUX EXAMENS ET CONCOURS",
+          "group": "",
+          "selected": false
+        }
+      ],
+      "display_label": "Objectif de formation"
+    }
+  },
+  "MODULE": {
+    "Gmodu_co_cont": {
+      "id": "Gmodu_co_cont",
+      "name": "Gmodu[co_cont]",
+      "label": "Code contenu",
+      "disabled": false,
+      "options": [
+        {
+          "value": "",
+          "label": "Faire un choix...",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "A01",
+          "label": "ARTS PLASTIQUES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "A02",
+          "label": "MUSIQUE ET EDUCATION MUSICALE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "A03",
+          "label": "ARTS APPLIQUES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "A04",
+          "label": "CINEMA, DANSE, THEATRE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "A05",
+          "label": "PATRIMOINE ET RICHESSES CULTURELLES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "A99",
+          "label": "AUTRE CONTENU ARTS ET PATRIMOINE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "B01",
+          "label": "LECTURE",
+          "group": "MAITRISE DE LA LANGUE, COMMUNICATION ECRITE/ORALE",
+          "selected": false
+        },
+        {
+          "value": "B02",
+          "label": "MAITRISE DE LA LANGUE",
+          "group": "MAITRISE DE LA LANGUE, COMMUNICATION ECRITE/ORALE",
+          "selected": false
+        },
+        {
+          "value": "B03",
+          "label": "ACTIVITES DE COMMUNICATION ORALE",
+          "group": "MAITRISE DE LA LANGUE, COMMUNICATION ECRITE/ORALE",
+          "selected": false
+        },
+        {
+          "value": "B04",
+          "label": "ACTIVITES DE COMMUNICATION ECRITE",
+          "group": "MAITRISE DE LA LANGUE, COMMUNICATION ECRITE/ORALE",
+          "selected": false
+        },
+        {
+          "value": "B05",
+          "label": "EDUCATION AUX M?DIAS",
+          "group": "MAITRISE DE LA LANGUE, COMMUNICATION ECRITE/ORALE",
+          "selected": false
+        },
+        {
+          "value": "B99",
+          "label": "AUTRE CONTENU MAITRISE LANGUE, ECRIT/ORAL",
+          "group": "MAITRISE DE LA LANGUE, COMMUNICATION ECRITE/ORALE",
+          "selected": false
+        },
+        {
+          "value": "C01",
+          "label": "AIDE AUX APPRENTISSAGES (Y COMPRIS AIDE A L'ELEVE)",
+          "group": "EDUCATION, FORMATION, ORGANISATION, ACCOMPAGNEMENT",
+          "selected": false
+        },
+        {
+          "value": "C02",
+          "label": "AIDE SPECIFIQUE A.S.H.",
+          "group": "EDUCATION, FORMATION, ORGANISATION, ACCOMPAGNEMENT",
+          "selected": false
+        },
+        {
+          "value": "C03",
+          "label": "AIDE SPECIFIQUE GRANDE DIFFICULTE SCOLAIRE",
+          "group": "EDUCATION, FORMATION, ORGANISATION, ACCOMPAGNEMENT",
+          "selected": false
+        },
+        {
+          "value": "C40",
+          "label": "ENVIRONNEMENT GEOGRAPHIQUE, ECONOMIQUE, SOCIAL ET",
+          "group": "EDUCATION, FORMATION, ORGANISATION, ACCOMPAGNEMENT",
+          "selected": false
+        },
+        {
+          "value": "C51",
+          "label": "ORGANISATION ET SUIVI DES STRUCTURES SCOLAIRES",
+          "group": "EDUCATION, FORMATION, ORGANISATION, ACCOMPAGNEMENT",
+          "selected": false
+        },
+        {
+          "value": "C52",
+          "label": "CONNAISSANCE DES SYSTEMES EDUCATIFS",
+          "group": "EDUCATION, FORMATION, ORGANISATION, ACCOMPAGNEMENT",
+          "selected": false
+        },
+        {
+          "value": "C60",
+          "label": "DIDACTIQUE ET PEDAGOGIE",
+          "group": "EDUCATION, FORMATION, ORGANISATION, ACCOMPAGNEMENT",
+          "selected": false
+        },
+        {
+          "value": "C61",
+          "label": "INGENIERIE EDUCATIVE ET DE FORMATION",
+          "group": "EDUCATION, FORMATION, ORGANISATION, ACCOMPAGNEMENT",
+          "selected": false
+        },
+        {
+          "value": "C70",
+          "label": "ORIENTATION",
+          "group": "EDUCATION, FORMATION, ORGANISATION, ACCOMPAGNEMENT",
+          "selected": false
+        },
+        {
+          "value": "C80",
+          "label": "TECHNIQUES DOCUMENTAIRES ET DOCUMENTATION",
+          "group": "EDUCATION, FORMATION, ORGANISATION, ACCOMPAGNEMENT",
+          "selected": false
+        },
+        {
+          "value": "C90",
+          "label": "ACCOMPAGNEMENT RH",
+          "group": "EDUCATION, FORMATION, ORGANISATION, ACCOMPAGNEMENT",
+          "selected": false
+        },
+        {
+          "value": "C99",
+          "label": "AUTRE CONTENU EDUC, FORMATION, ORGA, ACCOMP",
+          "group": "EDUCATION, FORMATION, ORGANISATION, ACCOMPAGNEMENT",
+          "selected": false
+        },
+        {
+          "value": "D01",
+          "label": "EDUCATION PHYSIQUE ET SPORTIVE",
+          "group": "EDUCATION PHYSIQUE ET SPORTIVE",
+          "selected": false
+        },
+        {
+          "value": "E01",
+          "label": "GESTION MATERIELLE ET PATRIMONIALE",
+          "group": "SCIENCES ET METIERS DE LA GESTION",
+          "selected": false
+        },
+        {
+          "value": "E02",
+          "label": "GESTION FINANCIERE ET COMPTABLE",
+          "group": "SCIENCES ET METIERS DE LA GESTION",
+          "selected": false
+        },
+        {
+          "value": "E04",
+          "label": "ECONOMIE ET GESTION",
+          "group": "SCIENCES ET METIERS DE LA GESTION",
+          "selected": false
+        },
+        {
+          "value": "E05",
+          "label": "ADMINISTRATION ET SECRETARIAT",
+          "group": "SCIENCES ET METIERS DE LA GESTION",
+          "selected": false
+        },
+        {
+          "value": "E06",
+          "label": "GESTION DU PERSONNEL",
+          "group": "SCIENCES ET METIERS DE LA GESTION",
+          "selected": false
+        },
+        {
+          "value": "E07",
+          "label": "GESTION DES MOYENS",
+          "group": "SCIENCES ET METIERS DE LA GESTION",
+          "selected": false
+        },
+        {
+          "value": "E99",
+          "label": "AUTRE CONTENU SCIENCES ET METIERS DE LA GESTION",
+          "group": "SCIENCES ET METIERS DE LA GESTION",
+          "selected": false
+        },
+        {
+          "value": "F01",
+          "label": "LETTRES",
+          "group": "LETTRES ET LANGUES",
+          "selected": false
+        },
+        {
+          "value": "F10",
+          "label": "LANGUES ANCIENNES",
+          "group": "LETTRES ET LANGUES",
+          "selected": false
+        },
+        {
+          "value": "F21",
+          "label": "ALLEMAND",
+          "group": "LETTRES ET LANGUES",
+          "selected": false
+        },
+        {
+          "value": "F22",
+          "label": "ANGLAIS",
+          "group": "LETTRES ET LANGUES",
+          "selected": false
+        },
+        {
+          "value": "F23",
+          "label": "ESPAGNOL",
+          "group": "LETTRES ET LANGUES",
+          "selected": false
+        },
+        {
+          "value": "F24",
+          "label": "ITALIEN",
+          "group": "LETTRES ET LANGUES",
+          "selected": false
+        },
+        {
+          "value": "F48",
+          "label": "INTERLANGUES",
+          "group": "LETTRES ET LANGUES",
+          "selected": false
+        },
+        {
+          "value": "F49",
+          "label": "AUTRES LANGUES ETRANGERES",
+          "group": "LETTRES ET LANGUES",
+          "selected": false
+        },
+        {
+          "value": "F50",
+          "label": "LANGUES REGIONALES",
+          "group": "LETTRES ET LANGUES",
+          "selected": false
+        },
+        {
+          "value": "F99",
+          "label": "AUTRE CONTENU LETTRES ET LANGUES",
+          "group": "LETTRES ET LANGUES",
+          "selected": false
+        },
+        {
+          "value": "G01",
+          "label": "METHODOLOGIE DE PROJET",
+          "group": "PILOTAGE ET ORGANISATION",
+          "selected": false
+        },
+        {
+          "value": "G03",
+          "label": "PILOTAGE DES ACTIVITES ET DES MOYENS",
+          "group": "PILOTAGE ET ORGANISATION",
+          "selected": false
+        },
+        {
+          "value": "G05",
+          "label": "CONSEIL, CARRIERE ET MOBILITE, GESTION COMPETENCES",
+          "group": "PILOTAGE ET ORGANISATION",
+          "selected": false
+        },
+        {
+          "value": "G06",
+          "label": "MANAGEMENT ET COMMUNICATION",
+          "group": "PILOTAGE ET ORGANISATION",
+          "selected": false
+        },
+        {
+          "value": "G07",
+          "label": "VALUATION DES POLITIQUES, STRUCTURES, DISPOS EDUC",
+          "group": "PILOTAGE ET ORGANISATION",
+          "selected": false
+        },
+        {
+          "value": "G99",
+          "label": "AUTRE CONTENU PILOTAGE ET ORGANISATION",
+          "group": "PILOTAGE ET ORGANISATION",
+          "selected": false
+        },
+        {
+          "value": "J01",
+          "label": "SANTE",
+          "group": "SANTE, SOCIAL, PREVENTION, HYGIENE ET SECURITE",
+          "selected": false
+        },
+        {
+          "value": "J02",
+          "label": "SOCIAL",
+          "group": "SANTE, SOCIAL, PREVENTION, HYGIENE ET SECURITE",
+          "selected": false
+        },
+        {
+          "value": "J03",
+          "label": "PREVENTION DES CONDUITES A RISQUE",
+          "group": "SANTE, SOCIAL, PREVENTION, HYGIENE ET SECURITE",
+          "selected": false
+        },
+        {
+          "value": "J04",
+          "label": "PREVENTION DE LA VIOLENCE",
+          "group": "SANTE, SOCIAL, PREVENTION, HYGIENE ET SECURITE",
+          "selected": false
+        },
+        {
+          "value": "J05",
+          "label": "PREVENTION DES RISQUES PROFESSIONNELS",
+          "group": "SANTE, SOCIAL, PREVENTION, HYGIENE ET SECURITE",
+          "selected": false
+        },
+        {
+          "value": "J06",
+          "label": "HYGIENE ET SECURITE",
+          "group": "SANTE, SOCIAL, PREVENTION, HYGIENE ET SECURITE",
+          "selected": false
+        },
+        {
+          "value": "J07",
+          "label": "SCIENCES MEDICO-SOCIALES",
+          "group": "SANTE, SOCIAL, PREVENTION, HYGIENE ET SECURITE",
+          "selected": false
+        },
+        {
+          "value": "J99",
+          "label": "AUTRE CONTENU SANTE, SOCIAL, PREVENTION, HYGIENE E",
+          "group": "SANTE, SOCIAL, PREVENTION, HYGIENE ET SECURITE",
+          "selected": false
+        },
+        {
+          "value": "K01",
+          "label": "MATHEMATIQUES",
+          "group": "SCIENCES, TECHNOLOGIE ET SCIENCES DE L'INGENIEUR",
+          "selected": false
+        },
+        {
+          "value": "K02",
+          "label": "PHYSIQUE-CHIMIE",
+          "group": "SCIENCES, TECHNOLOGIE ET SCIENCES DE L'INGENIEUR",
+          "selected": false
+        },
+        {
+          "value": "K03",
+          "label": "SCIENCES DE LA VIE ET DE LA TERRE",
+          "group": "SCIENCES, TECHNOLOGIE ET SCIENCES DE L'INGENIEUR",
+          "selected": false
+        },
+        {
+          "value": "K04",
+          "label": "TECHNOLOGIE",
+          "group": "SCIENCES, TECHNOLOGIE ET SCIENCES DE L'INGENIEUR",
+          "selected": false
+        },
+        {
+          "value": "K05",
+          "label": "BIOTECHNOLOGIES ET SBSSA",
+          "group": "SCIENCES, TECHNOLOGIE ET SCIENCES DE L'INGENIEUR",
+          "selected": false
+        },
+        {
+          "value": "K06",
+          "label": "ARCHITECTURE ET CONSTRUCTION",
+          "group": "SCIENCES, TECHNOLOGIE ET SCIENCES DE L'INGENIEUR",
+          "selected": false
+        },
+        {
+          "value": "K07",
+          "label": "ENERGIE ET ENVIRONNEMENT",
+          "group": "SCIENCES, TECHNOLOGIE ET SCIENCES DE L'INGENIEUR",
+          "selected": false
+        },
+        {
+          "value": "K08",
+          "label": "INNOVATION TECHNOLOGIQUE",
+          "group": "SCIENCES, TECHNOLOGIE ET SCIENCES DE L'INGENIEUR",
+          "selected": false
+        },
+        {
+          "value": "K09",
+          "label": "TRANSFORMATIONS (CHIMIE, AGROALIM, VERRE, ETC.)",
+          "group": "SCIENCES, TECHNOLOGIE ET SCIENCES DE L'INGENIEUR",
+          "selected": false
+        },
+        {
+          "value": "K10",
+          "label": "MECANIQUE ET STRUCTURES METALLIQUES",
+          "group": "SCIENCES, TECHNOLOGIE ET SCIENCES DE L'INGENIEUR",
+          "selected": false
+        },
+        {
+          "value": "K11",
+          "label": "MOTEURS, M?CANIQUE AUTO ET AERONAUTIQUE",
+          "group": "SCIENCES, TECHNOLOGIE ET SCIENCES DE L'INGENIEUR",
+          "selected": false
+        },
+        {
+          "value": "K12",
+          "label": "ELECTRICITE, ELECTRONIQUE",
+          "group": "SCIENCES, TECHNOLOGIE ET SCIENCES DE L'INGENIEUR",
+          "selected": false
+        },
+        {
+          "value": "K13",
+          "label": "INFORMATIQUE-AUTOMATISME-MAINTENANCE INDUSTRIELLES",
+          "group": "SCIENCES, TECHNOLOGIE ET SCIENCES DE L'INGENIEUR",
+          "selected": false
+        },
+        {
+          "value": "K14",
+          "label": "BATIMENT, TRAVAUX PUBLICS, BOIS",
+          "group": "SCIENCES, TECHNOLOGIE ET SCIENCES DE L'INGENIEUR",
+          "selected": false
+        },
+        {
+          "value": "K15",
+          "label": "ENERGETIQUE, CLIMATISATION, CHAUFFAGE",
+          "group": "SCIENCES, TECHNOLOGIE ET SCIENCES DE L'INGENIEUR",
+          "selected": false
+        },
+        {
+          "value": "K16",
+          "label": "MATERIAUX SOUPLES, TEXTILE, HABILLEMENT",
+          "group": "SCIENCES, TECHNOLOGIE ET SCIENCES DE L'INGENIEUR",
+          "selected": false
+        },
+        {
+          "value": "K17",
+          "label": "TECHNIQUES DE LABORATOIRE",
+          "group": "SCIENCES, TECHNOLOGIE ET SCIENCES DE L'INGENIEUR",
+          "selected": false
+        },
+        {
+          "value": "K18",
+          "label": "SCIENCES DE L'INGENIEUR",
+          "group": "SCIENCES, TECHNOLOGIE ET SCIENCES DE L'INGENIEUR",
+          "selected": false
+        },
+        {
+          "value": "K19",
+          "label": "NUMERIQUE ET SCIENCES INFORMATIQUES",
+          "group": "SCIENCES, TECHNOLOGIE ET SCIENCES DE L'INGENIEUR",
+          "selected": false
+        },
+        {
+          "value": "K99",
+          "label": "AUTRE CONTENU SCIENCES, TECHNO, SCIENCES INGENIEUR",
+          "group": "SCIENCES, TECHNOLOGIE ET SCIENCES DE L'INGENIEUR",
+          "selected": false
+        },
+        {
+          "value": "L01",
+          "label": "HISTOIRE, GEOGRAPHIE",
+          "group": "SCIENCES HUMAINES, SCIENCES SOCIALES ET DROIT",
+          "selected": false
+        },
+        {
+          "value": "L05",
+          "label": "PHILOSOPHIE",
+          "group": "SCIENCES HUMAINES, SCIENCES SOCIALES ET DROIT",
+          "selected": false
+        },
+        {
+          "value": "L10",
+          "label": "EDUCATION CIVIQUE ET EDUCATION A LA CITOYENNETE",
+          "group": "SCIENCES HUMAINES, SCIENCES SOCIALES ET DROIT",
+          "selected": false
+        },
+        {
+          "value": "L11",
+          "label": "SOCIOLOGIE",
+          "group": "SCIENCES HUMAINES, SCIENCES SOCIALES ET DROIT",
+          "selected": false
+        },
+        {
+          "value": "L12",
+          "label": "PSYCHOLOGIE ET SCIENCES DE L'EDUCATION",
+          "group": "SCIENCES HUMAINES, SCIENCES SOCIALES ET DROIT",
+          "selected": false
+        },
+        {
+          "value": "L51",
+          "label": "DROIT",
+          "group": "SCIENCES HUMAINES, SCIENCES SOCIALES ET DROIT",
+          "selected": false
+        },
+        {
+          "value": "L53",
+          "label": "CULTURE JURIDIQUE",
+          "group": "SCIENCES HUMAINES, SCIENCES SOCIALES ET DROIT",
+          "selected": false
+        },
+        {
+          "value": "L60",
+          "label": "SCIENCES ECONOMIQUES ET SOCIALES",
+          "group": "SCIENCES HUMAINES, SCIENCES SOCIALES ET DROIT",
+          "selected": false
+        },
+        {
+          "value": "L99",
+          "label": "AUTRE CONTENU SCIENCES HUMAINES, SOCIALES ET DROIT",
+          "group": "SCIENCES HUMAINES, SCIENCES SOCIALES ET DROIT",
+          "selected": false
+        },
+        {
+          "value": "M01",
+          "label": "COMMERCE ET VENTE",
+          "group": "SERVICES",
+          "selected": false
+        },
+        {
+          "value": "M02",
+          "label": "LOGISTIQUE ET TRANSPORTS",
+          "group": "SERVICES",
+          "selected": false
+        },
+        {
+          "value": "M03",
+          "label": "HOTELLERIE, RESTAURATION, TOURISME",
+          "group": "SERVICES",
+          "selected": false
+        },
+        {
+          "value": "M05",
+          "label": "IMPRIMERIE, EDITION",
+          "group": "SERVICES",
+          "selected": false
+        },
+        {
+          "value": "M10",
+          "label": "ACCUEIL",
+          "group": "SERVICES",
+          "selected": false
+        },
+        {
+          "value": "M20",
+          "label": "ENTRETIEN DES LOCAUX, DES ESPACES VERTS, MAINTENAN",
+          "group": "SERVICES",
+          "selected": false
+        },
+        {
+          "value": "M99",
+          "label": "AUTRE CONTENU SERVICES",
+          "group": "SERVICES",
+          "selected": false
+        },
+        {
+          "value": "N01",
+          "label": "OUTILS NUMERIQUES DE TRAVAIL",
+          "group": "USAGES DU NUMERIQUE ET DES SYSTEMES D'INFORMATION",
+          "selected": false
+        },
+        {
+          "value": "N02",
+          "label": "METHODES, TECHNIQUES ET LANGAGES INFORMATIQUES",
+          "group": "USAGES DU NUMERIQUE ET DES SYSTEMES D'INFORMATION",
+          "selected": false
+        },
+        {
+          "value": "N03",
+          "label": "INFORMATIQUE DE GESTION",
+          "group": "USAGES DU NUMERIQUE ET DES SYSTEMES D'INFORMATION",
+          "selected": false
+        },
+        {
+          "value": "N05",
+          "label": "USAGES PEDAGOGIQUES DU NUMERIQUE",
+          "group": "USAGES DU NUMERIQUE ET DES SYSTEMES D'INFORMATION",
+          "selected": true
+        },
+        {
+          "value": "N06",
+          "label": "INFRASTRUCTURES,RESEAUX ET TELECOMS",
+          "group": "USAGES DU NUMERIQUE ET DES SYSTEMES D'INFORMATION",
+          "selected": false
+        },
+        {
+          "value": "N99",
+          "label": "AUTRE CONTENU NUMERIQUE ET SYSTEMES D?INFORMATION",
+          "group": "USAGES DU NUMERIQUE ET DES SYSTEMES D'INFORMATION",
+          "selected": false
+        },
+        {
+          "value": "P98",
+          "label": "CONTENUS TOUCHANT A PLUSIEURS GROUPES, INTER-TRANS",
+          "group": "AUTRES CONTENUS",
+          "selected": false
+        },
+        {
+          "value": "P99",
+          "label": "CONTENU NE TOUCHANT A AUCUN DOMAINE PRECEDENT",
+          "group": "AUTRES CONTENUS",
+          "selected": false
+        }
+      ],
+      "display_label": "Code contenu"
+    },
+    "Gmodu_co_cibl": {
+      "id": "Gmodu_co_cibl",
+      "name": "Gmodu[co_cibl]",
+      "label": "Public cible",
+      "disabled": false,
+      "options": [
+        {
+          "value": "",
+          "label": "Faire un choix",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "C2",
+          "label": "ASSISTANT D'EDUCATION",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "T2",
+          "label": "ASSISTANT ET CONSEILLER DE PREVENTION",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "A7",
+          "label": "ASSISTANT ETRANGER",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "G1",
+          "label": "CHEF DE DIVISION OU RESPONSABLE DE SERVICE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "B3",
+          "label": "CONSEILLER PEDAGOGIQUE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "N2",
+          "label": "CORRESPONDANT RRH (RELATIONS RESSOURCES HUMAINES)",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "G4",
+          "label": "DIRECTEUR DELEGUE AUX FORMATIONS PRO ET TECH",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "N1",
+          "label": "DRH (DIRECTEUR DES RESSOURCES HUMAINES)",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "A2",
+          "label": "ENSEIGNANT EN COLLEGE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "A4",
+          "label": "ENSEIGNANT EN LYCEE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "A5",
+          "label": "ENSEIGNANT EN LYCEE PROFESSIONNEL",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "C0",
+          "label": "FONCTION D'EDUCATION",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "A0",
+          "label": "FONCTION D'ENSEIGNEMENT",
+          "group": "",
+          "selected": true
+        },
+        {
+          "value": "K0",
+          "label": "FONCTION D'INSPECTION",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "J0",
+          "label": "FONCTION DE DIRECTION ECOLE, EPLE, ETAB SPECIALISE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "N0",
+          "label": "FONCTION DE GESTION DES RESSOURCES HUMAINES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "E0",
+          "label": "FONCTION DOCUMENTATION, BIBLIOTHEQUES, ARCHIVES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "T0",
+          "label": "FONCTION HYGIENE ET SECURITE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "M0",
+          "label": "FONCTION MEDICO-SOCIALE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "B1",
+          "label": "FORMATEUR",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "Y3",
+          "label": "INTER-CATEGORIEL PERSONNELS ATSS",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "U3",
+          "label": "LABORATOIRE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "D3",
+          "label": "PERSONNEL D'ORIENTATION",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "D1",
+          "label": "PERSONNEL DE L'ASH",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "M2",
+          "label": "PERSONNEL INFIRMIER",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "D2",
+          "label": "PSYCHOLOGUE SCOLAIRE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "Y0",
+          "label": "PUBLIC INTER CATEGORIEL",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "P2",
+          "label": "SECRETARIAT DES SERVICES EN DSDEN OU EN RECTORAT",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "B7",
+          "label": "TUTEUR",
+          "group": "",
+          "selected": false
+        }
+      ],
+      "display_label": "Public cible Sofia"
+    },
+    "Gmodu_co_prna": {
+      "id": "Gmodu_co_prna",
+      "name": "Gmodu[co_prna]",
+      "label": "Priorité nationale",
+      "disabled": false,
+      "options": [
+        {
+          "value": "",
+          "label": "Faire un choix",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "00",
+          "label": "00-Aucune des priorités nationales actuelles",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "5A01",
+          "label": "5A01-VDR LUTTE CONTRE TOUTE FORME DE DISCRIMINATION",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "5A02",
+          "label": "5A02-PROMOTION DE LA CITOYENNETE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "5A03",
+          "label": "5A03-POLITIQUES EDUCATIVES DROITS ET OBLIGATIONS",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "5B01",
+          "label": "5B01-DIDACTIQUE ET PEDAGOGIE FRANCAIS ET MATHEMATIQUES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "5B02",
+          "label": "5B02-APPRENTISSAGES A L'ECOLE MATERNELLE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "5B03",
+          "label": "5B03-DISCIPLINES D'ENSEIGNEMENT",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "5B04",
+          "label": "5B04-PARCOURS D'ORIENTATION ET DECOUVERTE DES METIERS",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "5B05",
+          "label": "5B05-PARCOURS EDUCATIFS EAC CITOYEN SANTE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "5B06",
+          "label": "5B06-CONDUITE DE CLASSE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "5B07",
+          "label": "5B07-COMPLEMENTARITE DES TEMPS EDUCATIFS",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "5C01",
+          "label": "5C01-MANAGEMENT CONDUITE DU CHANGEMENT DIALOGUE SOCIAL",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "5C02",
+          "label": "5C02-PILOTAGE PEDAGOGIQUE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "5D01",
+          "label": "5D01-PARCOURS DIFFERENCIES PAR METIER",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "5D02",
+          "label": "5D02-PARCOURS AGENTS CHARGES DU BUDGET ET DES FINANCES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "5D03",
+          "label": "5D03-PARCOURS DES ACTEURS DE LA COMMUNAUTE RH",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "5D04",
+          "label": "5D04-FORMATION DES ACTEURS ACCOMPAGNEMENT PERSONNALISE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "5D05",
+          "label": "5D05-FORMATION DES ACTEURS DE LA FORMATION",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "5E01",
+          "label": "5E01-PRATIQUES PEDAGOGIQUES INCLUSIVES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "5E02",
+          "label": "5E02-INCLUSION ET COOPERATION EDUCATIVE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "5E03",
+          "label": "5E03-INCLUSION DES AGENTS DANS LE CADRE PROFESSIONNEL",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "5F01",
+          "label": "5F01-PROMOTION DE LA SANTE ET EVARS",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "5F02",
+          "label": "5F02-PREVENTION ET LUTTE CONTRE TOUTES LES VIOLENCES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "5F03",
+          "label": "5F03-GESTION DE CRISE PSC ET SANTE MENTALE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "5F04",
+          "label": "5F04-QUALITE DE VIE SANTE SECURITE AU TRAVAIL",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "5G01",
+          "label": "5G01-ENJEUX ET LEVIERS DE LA TRANSITION ECOLOGIQUE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "5G02",
+          "label": "5G02-ACCOMPAGNEMENT DES PROJETS ECO-RESPONSABLES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "5G03",
+          "label": "5G03-USAGE RAISONNE DE L'INTELLIGENCE ARTIFICIELLE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "5G04",
+          "label": "5G04-COMPETENCES NUMERIQUES DES PERSONNELS",
+          "group": "",
+          "selected": true
+        },
+        {
+          "value": "5G05",
+          "label": "5G05-CYBERSECURITE ET PROTECTION DES DONNEES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "5H01",
+          "label": "5H01-PROFESSIONNALISATION JEPVA",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "5H02",
+          "label": "5H02-PROFESSIONNALISATION JS",
+          "group": "",
+          "selected": false
+        }
+      ],
+      "display_label": "Priorité nationale"
+    },
+    "Gmodu_co_thema": {
+      "id": "Gmodu_co_thema",
+      "name": "Gmodu[co_thema]",
+      "label": "Thématique nationale",
+      "disabled": false,
+      "options": [
+        {
+          "value": "00",
+          "label": "00-Aucune thématique actuelle",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "1A01",
+          "label": "1A01-LAICITE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "1A02",
+          "label": "1A02-LIBERTES ET DROITS FONDAMENTAUX",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "1A03",
+          "label": "1A03-EGALITE DES DROITS",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "1A04",
+          "label": "1A04-EDUCATION A LA DEFENSE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "1B01",
+          "label": "1B01-ETHIQUE ET DEONTOLOGIE DANS LA FONCTION PUBLIQUE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "1B02",
+          "label": "1B02-CONNAISSANCE DU SYSTEME EDUCATIF",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "1B03",
+          "label": "1B03-CULTURE JURIDIQUE ET FONDAMENTAUX DU DROIT",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "1B04",
+          "label": "1B04-EGALITE PROFESSIONNELLE FEMME HOMME",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "1C01",
+          "label": "1C01-EFFETS DE LA PAUVRETE ET DE LA PRECARITE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "1C02",
+          "label": "1C02-DETERMINISMES SOCIAUX ET TERRITORIAUX",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "1C03",
+          "label": "1C03-EDUCATION PRIORITAIRE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "1C04",
+          "label": "1C04-RURALITE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "1C05",
+          "label": "1C05-RELATION ECOLE FAMILLES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "1C06",
+          "label": "1C06-ECOLE INCLUSIVE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "1C07",
+          "label": "1C07-LUTTE CONTRE L'ILLETTRISME, L'INNUMERISME",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "1D01",
+          "label": "1D01-LUTTE CONTRE LE RACISME ET L'ANTISEMITISME",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "1D02",
+          "label": "1D02-LUTTE CONTRE LES DISCRIMINATIONS LIEES AU HANDICAP",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "1D03",
+          "label": "1D03-LUTTE CONTRE LES STEREOTYPES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "1D04",
+          "label": "1D04-EGALITE ENTRE LES FILLES ET LES GARCONS",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "1D05",
+          "label": "1D05-LUTTE CONTRE LES LGBT+ PHOBIES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "1D06",
+          "label": "1D06-LUTTE CONTRE LES INEGALITES ET LES DISCRIMINATIONS",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "1E01",
+          "label": "1E01-CLIMAT SCOLAIRE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "1E02",
+          "label": "1E02-ENGAGEMENT, CITOYENNETE, DEMOCRATIE SCOLAIRE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "1E03",
+          "label": "1E03-LUTTE CONTRE LE HARCELEMENT ET LE CYBERHARCELEMENT",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "1E04",
+          "label": "1E04-PREVENTION DES VIOLENCES PSYCHIQUES ET PHYSIQUES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "1E05",
+          "label": "1E05-LUTTE CONTRE LES VIOLENCES DANS LE SPORT",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "1E06",
+          "label": "1E06-PREVENTION DE LA RADICALISATION",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "1E07",
+          "label": "1E07-CONTROLE DES DIPLOMES DU SPORT ET DE L'ANIMATION",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "1E08",
+          "label": "1E08-SECURITE DES BIENS ET DES PERSONNES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "1F01",
+          "label": "1F01-PARCOURS EDUCATIF DE SANTE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "1F02",
+          "label": "1F02-COMPETENCES PSYCHO-SOCIALES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "1F03",
+          "label": "1F03-SECOURISME",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "1F04",
+          "label": "1F04-ECOLE PROMOTRICE DE SANTE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "1F05",
+          "label": "1F05-EDUCATION A L'ALIMENTATION",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "1F06",
+          "label": "1F06-EDUCATION A LA SEXUALITE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "1F07",
+          "label": "1F07-SOBRIETE NUMERIQUE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "1F08",
+          "label": "1F08-LUTTE CONTRE LE DOPAGE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "1F09",
+          "label": "1F09-SUIVI MEDICAL DES SPORTIFS",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "1F10",
+          "label": "1F10-SECURISATION DES STRUCTURES SPORTIVES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "2A01",
+          "label": "2A01-SAVOIRS FONDAMENTAUX - PLAN FRANCAIS",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "2A02",
+          "label": "2A02-SAVOIRS FONDAMENTAUX - PLAN MATHEMATIQUES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "2A03",
+          "label": "2A03-SAVOIRS FONDAMENTAUX - PLAN LANGUES VIVANTES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "2A04",
+          "label": "2A04-SAVOIRS FONDAMENTAUX - SCIENCES ET TECHNOLOGIES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "2A05",
+          "label": "2A05-PROGRAMMES, ENSEIGNEMENTS ET DIDACTIQUES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "2A06",
+          "label": "2A06-INTERDISCIPLINARITE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "2A07",
+          "label": "2A07-OBJECTIFS, MODALITES ET PRATIQUES D'EVALUATION",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "2A08",
+          "label": "2A08-SAVOIRS FONDAMENTAUX - PLAN MATERNELLE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "2B01",
+          "label": "2B01-RECHERCHE-DEVELOPPEMENT-INNOVATION-EXPERIMENTATION",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "2B02",
+          "label": "2B02-SCIENCES COGNITIVES ET MECANISMES D'APPRENTISSAGE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "2B03",
+          "label": "2B03-DIFFERENCIATION PEDAGOGIQUE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "2B04",
+          "label": "2B04-OBJECTIFS, MODALITES ET PRATIQUES D'EVALUATION",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "2C01",
+          "label": "2C01-ESPRIT CRITIQUE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "2C02",
+          "label": "2C02-EDUCATION AUX MEDIAS ET A L'INFORMATION",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "2C03",
+          "label": "2C03-CREATIVITE, COOPERATION, COMMUNICATION",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "2D01",
+          "label": "2D01-COMPETENCES PSYCHO-SOCIALES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "2D02",
+          "label": "2D02-LUTTE CONTRE LE DECROCHAGE SCOLAIRE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "2D03",
+          "label": "2D03-COMPREHENSION DES OBSTACLES AUX APPRENTISSAGES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "2D04",
+          "label": "2D04-MOTIVATION",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "2E01",
+          "label": "2E01-LUTTE CONTRE LE DECROCHAGE SCOLAIRE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "2E02",
+          "label": "2E02-PSYCHOLOGIE DE L'ADOLESCENT",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "2E03",
+          "label": "2E03-TECHNIQUES DE CONDUITES D'ENTRETIEN",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "2E04",
+          "label": "2E04-RELATION ECOLE-FAMILLES ET ORIENTATION",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "2E05",
+          "label": "2E05-CONTINUITE ECOLE-COLLEGE-LYCEE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "2E06",
+          "label": "2E06-LUTTE CONTRE LES DETERMINISMES DANS L'ORIENTATION",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "2E07",
+          "label": "2E07-CONTINUUM LYCEE-UNIVERSITE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "2E08",
+          "label": "2E08-RELATIONS ECOLE-ENTREPRISE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "2E09",
+          "label": "2E09-PARTENARIAT ETAT-REGION",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "2F01",
+          "label": "2F01-17 OBJECTIFS DE DEVELOPPEMENT DURABLE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "2F02",
+          "label": "2F02-CULTURE ET DEMARCHE SCIENTIFIQUES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "2F03",
+          "label": "2F03-CIRCUIT DE PRODUCTION DES CONNAISSANCES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "2F04",
+          "label": "2F04-SAVOIRS, OPINIONS, CROYANCES, RAPPORT A LA VERITE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "2F05",
+          "label": "2F05-SOBRIETE NUMERIQUE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "2G01",
+          "label": "2G01-EDUCATION ARTISTIQUE ET CULTURELLE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "2G02",
+          "label": "2G02-CONDUITE DE PROJETS",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "2G03",
+          "label": "2G03-COOPERATION EUROPEENNE ET INTERNATIONALE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "3A01",
+          "label": "3A01-CONTINUITE ET ALLIANCES EDUCATIVES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "3A02",
+          "label": "3A02-AUTONOMIE D'ACCES AUX DROITS",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "3A03",
+          "label": "3A03-PARCOURS DE FORMATION/D'INSERTION POUR LES JEUNES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "3A04",
+          "label": "3A04-PREVENTION DES VIOLENCES ET DES DERIVES SEXUELLES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "3A05",
+          "label": "3A05-DEVELOPPEMENT DE LA CULTURE DE L'ENGAGEMENT",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "3A06",
+          "label": "3A06-ACCOMPAGNEMENT ET SOUTIEN A LA QUALITE EDUCATIVE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "3A07",
+          "label": "3A07-ACCOMPAGNEMENT DES DYNAMIQUES ASSOCIATIVES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "3A08",
+          "label": "3A08-ACCES AU SPORT DES PUBLICS CIBLES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "3A09",
+          "label": "3A09-EDUCATION AUX APTITUDES FONDAMENTALES PAR LE SPORT",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "3A10",
+          "label": "3A10-CITOYENNETE ET INTEGRATION PAR LE SPORT",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "3A11",
+          "label": "3A11-DEMARCHES ET PRATIQUES DE L'EDUCATION POPULAIRE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "3A12",
+          "label": "3A12-POLITIQUES EN FAVEUR DU SPORT SANTE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "3A13",
+          "label": "3A13-DEV DURABLE EN FAVEUR DES JEUNES ET DU SPORT",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "3B01",
+          "label": "3B01-LABO DES PRATIQUES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "3B02",
+          "label": "3B02-EXPERIMENTATION",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "3B03",
+          "label": "3B03-SPECIALITES TECHNIQUES ET PEDAGOGIQUES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "3B04",
+          "label": "3B04-DEMARCHES & METHODOLOGIE D'INGENIERIE TERRITORIALE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "3B05",
+          "label": "3B05-COMMUNAUTES APPRENANTES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "3B06",
+          "label": "3B06-ANALYSES DE PRATIQUES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "3B07",
+          "label": "3B07-ENJEUX ET STRATEGIES DES ACTEURS TERRITORIAUX",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "3B08",
+          "label": "3B08-PRATIQUES D'EDUCATION POPULAIRE ET POLITIQUES JES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "3B09",
+          "label": "3B09-SUIVI DES CONFERENCES REGIONALES DU SPORT",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "3B10",
+          "label": "3B10-DEVELOPPEMENT DE POLITIQUES TERRITORIALES JES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "3B11",
+          "label": "3B11-PORTAGE DE PROJETS SPORTIFS COMPLEXES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "3B12",
+          "label": "3B12-FORMATION DES ACTEURS LOCAUX DU SPORT",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "3B13",
+          "label": "3B13-CERTIFICATION DES CENTRES DE FORMATION EN SPORT",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "3B14",
+          "label": "3B14-FORMATION DES CADRES BENEVOLES ET PROFESSIONNELS",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "3B15",
+          "label": "3B15-STRUCTURATION, PROFESSIONNALISATION - ASSOCIATIONS",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "3C01",
+          "label": "3C01-INSPECTION CONTROLE EVALUATION JES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "3C02",
+          "label": "3C02-ACCOMPAGNEMENT ET OUTILS COLLABORATIFS",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "3C03",
+          "label": "3C03-ACCOMPAGNEMENT DES SPORTIFS ET CADRES HAUT NIVEAU",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "3C04",
+          "label": "3C04-ACCOMPAGNEMENT DES ACTEURS LOCAUX JES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "3C05",
+          "label": "3C05-MANAGEMENT COORDINATION D'EQUIPES SPORTIVES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "3C06",
+          "label": "3C06-ENTRAINEMENT SPORTIF ET PERFORMANCE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "3C07",
+          "label": "3C07-PILOTAGE ET OPTIMISATION DE LA HAUTE PERFORMANCE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "3C08",
+          "label": "3C08-DETECTION DES TALENTS",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "3C09",
+          "label": "3C09-DIRECTION ET EVALUATION DES STRUCTURES LABELLISEES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "4A01",
+          "label": "4A01-ENVIRONNEMENT DE TRAVAIL",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "4A02",
+          "label": "4A02-ACTEURS ET MISSIONS",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "4A03",
+          "label": "4A03-REFERENTIELS",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "4B01",
+          "label": "4B01-RECUEIL / ANALYSE DES BESOINS",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "4B02",
+          "label": "4B02-DIAGNOSTIC ET ACCOMPAGNEMENT",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "4C01",
+          "label": "4C01-PREPARATION CONCOURS CAPES, CAPET, CAPEPS, CAPLP",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "4C02",
+          "label": "4C02-PREPARATION CONCOURS AGREGATION",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "4C03",
+          "label": "4C03-PREPARATION CONCOURS CPE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "4C04",
+          "label": "4C04-PREPARATION CONCOURS PSYEN",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "4C05",
+          "label": "4C05-PREPARATION CONCOURS ADMINISTRATION",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "4C06",
+          "label": "4C06-PREPARATION CONCOURS SANTE, SOCIAL",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "4C07",
+          "label": "4C07-PREPARATION CONCOURS ITRF",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "4C08",
+          "label": "4C08-PREPARATION CONCOURS ENCADREMENT",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "4C09",
+          "label": "4C09-DPC DES PERSONNELS DE SANTE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "4C10",
+          "label": "4C10-BILANS DE COMPETENCES, VAE, CPF, CFP",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "4C11",
+          "label": "4C11-ANIMATION D'UN RESEAU",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "4C12",
+          "label": "4C12-ESPACES DE DEVELOPPEMENT PROFESSIONNEL",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "4D01",
+          "label": "4D01-CONSEIL ET ACCOMPAGNEMENT",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "4D02",
+          "label": "4D02-PERSONNALISATION",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "4D03",
+          "label": "4D03-DIAGNOSTIC DE MOBILITE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "4E01",
+          "label": "4E01-CULTURE JURIDIQUE DROIT DU TRAVAIL",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "4E02",
+          "label": "4E02-BIEN-ETRE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "4E03",
+          "label": "4E03-LUTTE CONTRE LES STEREOTYPES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "4E04",
+          "label": "4E04-PROCESSUS DE RECRUTEMENT",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "4E05",
+          "label": "4E05-POLITIQUE DE VIVIER",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "4F01",
+          "label": "4F01-ANALYSE DE L'ACTIVITE PROFESSIONNELLE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "4F02",
+          "label": "4F02-OUTILS ET METHODES D'INNOVATION",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "4F03",
+          "label": "4F03-DEMARCHE DESIGN",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "4F04",
+          "label": "4F04-APPRENDRE PAR LA RECHERCHE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "4F05",
+          "label": "4F05-RECHERCHE ACTION",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "4G01",
+          "label": "4G01-COMMUNAUTES DE PRATIQUES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "4G02",
+          "label": "4G02-CO-DEVELOPPEMENT",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "4G03",
+          "label": "4G03-INTELLIGENCE COLLECTIVE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "4G04",
+          "label": "4G04-DEMARCHE DESIGN",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "4G05",
+          "label": "4G05-ANIMATION DE RESEAU",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "4H01",
+          "label": "4H01-ECO-CITOYENNETE : ECONOMIE, ENVIRONNEMENT, SOCIETE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "4H02",
+          "label": "4H02-CIRCUIT DE PRODUCTION DES CONNAISSANCES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "4I01",
+          "label": "4I01-MOBILITE GEOGRAPHIQUE ET DEVELOPPEMENT PRO",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "4I02",
+          "label": "4I02-VALORISATION DES PARCOURS",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "4I03",
+          "label": "4I03-INTERCULTURALITE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "4J01",
+          "label": "4J01-BIEN-ETRE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "4J02",
+          "label": "4J02-PROCESS PARTICIPATIFS ET DE CO-CONSTRUCTION",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "4J03",
+          "label": "4J03-PROCESS DE VALIDATION",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "4J04",
+          "label": "4J04-PREVENTION DES RISQUES PSYCHO-SOCIAUX",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "4J05",
+          "label": "4J05-SANTE ET SECURITE AU TRAVAIL",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "5A01",
+          "label": "5A01-ANIMATION D'UN COLLECTIF DE TRAVAIL",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "5A02",
+          "label": "5A02-RESPONSABILISATION DES EQUIPES ET DELEGATION",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "5A03",
+          "label": "5A03-MOTIVATION ET VALORISATION DE SON EQUIPE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "5A04",
+          "label": "5A04-PREVENTION DES RISQUES PSYCHO-SOCIAUX",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "5A05",
+          "label": "5A05-REALISATION DE L'ENTRETIEN ANNUEL D'EVALUATION",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "5A06",
+          "label": "5A06-DEVELOPPEMENT PROFESSIONNEL DES COLLABORATEURS",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "5A07",
+          "label": "5A07-PREVENTION ET GESTION DES CONFLITS",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "5A08",
+          "label": "5A08-PILOTAGE PEDAGOGIQUE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "5B01",
+          "label": "5B01-CREATIVITE, COOPERATION, COMMUNICATION",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "5B02",
+          "label": "5B02-CONDUITE DE PROJETS DE TRANSFORMATION",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "5B03",
+          "label": "5B03-RENFORCEMENT DE L'EXPERTISE BUDGETAIRE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "5B04",
+          "label": "5B04-RENFORCEMENT DE L'EXPERTISE JURIDIQUE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "5B05",
+          "label": "5B05-CULTURE DE L'EVALUATION DES POLITIQUES PUBLIQUES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "5B06",
+          "label": "5B06-CULTURE DU DIALOGUE SOCIAL ET DE LA NEGOCIATION",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "5B07",
+          "label": "5B07-PREVENTION ET GESTION DE CRISE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "5B08",
+          "label": "5B08-DEMARCHE QUALITE ET MAITRISE DES RISQUES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "5C01",
+          "label": "5C01-LUTTE CONTRE LES STEREOTYPES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "5C02",
+          "label": "5C02-CONNAISSANCES JURIDIQUES EN DROIT DU TRAVAIL",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "5C03",
+          "label": "5C03-PRATIQUES MANAGERIALES NON DISCRIMINANTES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "5C04",
+          "label": "5C04-LUTTE CONTRE LES VIOLENCES SEXISTES ET SEXUELLES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "6A01",
+          "label": "6A01-MAITRISE DE L'ENVIRONNEMENT NUMERIQUE DE TRAVAIL",
+          "group": "",
+          "selected": true
+        },
+        {
+          "value": "6A02",
+          "label": "6A02-CADRE DE REFERENCE DES COMPETENCES NUMERIQUES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "6A03",
+          "label": "6A03-USAGE ET PARTAGE DES COMMUNS NUMERIQUES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "6A04",
+          "label": "6A04-CONTINUITE ADMINISTRATIVE ET PEDAGOGIQUE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "6B01",
+          "label": "6B01-COMPETENCES DU XXIE SIECLE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "6B02",
+          "label": "6B02-IDENTITE ET SECURITE NUMERIQUES, RGPD",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "6B03",
+          "label": "6B03-CITOYENNETE NUMERIQUE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "6B04",
+          "label": "6B04-INCLUSION NUMERIQUE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "6B05",
+          "label": "6B05-DONNEES, ALGORITHMES ET CODES SOURCES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "6C01",
+          "label": "6C01-NUMERIQUE ET APPRENTISSAGE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "6C02",
+          "label": "6C02-HYBRIDATION",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "6C03",
+          "label": "6C03-SCENARISATION",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "6C04",
+          "label": "6C04-PRATIQUES COLLABORATIVES NUMERIQUES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "6C05",
+          "label": "6C05-COMMUNICATION NUMERIQUE ET ACCESSIBILITE DE L'INFO",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "6C06",
+          "label": "6C06-INTELLIGENCE ARTIFICIELLE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "7A01",
+          "label": "7A01-FRANCAIS ET MAITRISE DE LA LANGUE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "7A02",
+          "label": "7A02-MATHEMATIQUES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "7A03",
+          "label": "7A03-SCIENCES ET TECHNOLOGIE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "7A04",
+          "label": "7A04-LANGUES VIVANTES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "7A05",
+          "label": "7A05-HUMANITES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "7A06",
+          "label": "7A06-ENSEIGNEMENTS ARTISTIQUES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "7A07",
+          "label": "7A07-EDUCATION PHYSIQUE ET SPORTIVE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "7A08",
+          "label": "7A08-PREPARATION AU CAPPEI",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "7A09",
+          "label": "7A09-BESOINS EDUCATIFS PARTICULIERS",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "7A10",
+          "label": "7A10-CONCEPTION UNIVERSELLE DES APPRENTISSAGES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "7A11",
+          "label": "7A11-PREPARATION A L'ENTREE EN CLASSE DE SECONDE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "7A12",
+          "label": "7A12-FORMATION EN ENTREPRISE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "7A13",
+          "label": "7A13-QUESTIONS ET POLITIQUES MEMORIELLES",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "7A14",
+          "label": "7A14-EVAR PREMIER DEGRE",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "7A15",
+          "label": "7A15-EVARS SECOND DEGRE",
+          "group": "",
+          "selected": false
+        }
+      ],
+      "display_label": "Thématique nationale"
+    },
+    "Gmodu_cumul": {
+      "id": "Gmodu_cumul",
+      "name": "Gmodu[cumul]",
+      "label": "Formation réglementaire",
+      "display_label": "Formation réglementaire",
+      "disabled": false,
+      "options": [
+        {
+          "value": "0",
+          "label": "Non",
+          "group": "",
+          "selected": false
+        },
+        {
+          "value": "1",
+          "label": "Oui",
+          "group": "",
+          "selected": false
+        }
+      ]
+    }
+  }
+}

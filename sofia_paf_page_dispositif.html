@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript" src="/sofia/assets/ead43241/jquery.min.js"></script>
+<script type="text/javascript" src="/sofia/js/men-2012/bootstrap.js?201805111357"></script>
+<script type="text/javascript" src="/sofia/js/men-2012/app.js?201805111357"></script>
+<script type="text/javascript" src="/sofia/js/men-2012/treeview/jquery.treeview.js?201805111357"></script>
+<script type="text/javascript" src="/sofia/js/men-2012/jquery.cookie.js?201805111357"></script>
+<script type="text/javascript" src="/sofia/js/men-2012/jquery-ui.min.js?201805111357"></script>
+<script type="text/javascript" src="/sofia/js/men-2012/jquery.multiple.select.js?201805111357"></script>
+<title>SOFIA</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="/sofia/img/favicon.png" />
+
+        <link rel="stylesheet" type="text/css" href="/sofia/css/men-2012/bootstrap.css?201805111357" media="screen,print" /><link rel="stylesheet" type="text/css" href="/sofia/css/men-2012/main.css?201805111357" media="screen" /><link rel="stylesheet" type="text/css" href="/sofia/css/men-2012/font-awesome.min.css?201805111357" media="screen,print" /><link rel="stylesheet" type="text/css" href="/sofia/css/men-2012/jquery.treeview.css?201805111357" media="screen" /><link rel="stylesheet" type="text/css" href="/sofia/css/men-2012/jquery-ui.min.css?201805111357" media="screen" /><link rel="stylesheet" type="text/css" href="/sofia/css/men-2012/multiple-select.css?201805111357" media="screen" /><link rel="stylesheet" type="text/css" href="/sofia/css/men-2012/styles.css?201805111357" media="screen,print" /><link rel="stylesheet" type="text/css" href="/sofia/css/men-2012/print.css?201805111357" media="print" />    </head>
+
+    <body><script type="text/javascript">
+/*<![CDATA[*/
+var baseUrl='/sofia';
+/*]]>*/
+</script>
+
+        <div class="container">
+            <div id="top" class="hidden-print">
+                <select name="select-year" id="select-year" class="hidden-print"><option value="currentYear">2026-2027</option><option value="previousYear">2025-2026</option></select><a href="/sofia/../arena" title="Retourner au portail"><i class="fa fa-chevron-left"></i>&nbsp;&nbsp;Retour au portail</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/sofia/site/logout" title="Déconnexion"><i class="fa fa-power-off"></i>&nbsp;&nbsp;mpino-didine</a>&nbsp;|&nbsp;<a title="Vider le cache" href="#" id="clear-cache"><i class="fa fa-cc"></i></a>            </div>
+            <div id="header">
+                <div id="header-left">
+                    <img alt="Logo Académie Bordeaux" src="/sofia/img/men-2012/logo-et-marianne.jpg" style="max-height: 130px;"/>
+                </div>
+                <div id="header-middle">
+                    <h1>
+                        SOFIA                        2026-2027                    </h1>
+                    <h2>Suivi et Organisation des Formations Internes à l'Académie</h2>
+                </div>
+                <div id="header-right">
+                </div>
+            </div>
+            <div class="hidden-print navbar navbar-inverse ">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-inverse-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse navbar-inverse-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="/sofia/">ACCUEIL</a></li><li><a href="/sofia/site/selectpaf">PLAN ACADEMIQUE DE FORMATION</a></li><li><a href="/sofia/gresp/budget">MES OFFRES</a></li><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">MES INSCRIPTIONS<span class="caret"></span></a><ul class="dropdown-menu" role="menu"><li><a href="/sofia/inscriptions/admin/type/eple">Par l'EPLE</a></li><li><a href="/sofia/inscriptions/admin/type/zap">En tant que coordonnateur de ZAP</a></li><li><a href="/sofia/inscriptions/exportCsv">Exporter en CSV</a></li></ul></li><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">ADMIN<span class="caret"></span></a><ul class="dropdown-menu" role="menu"><li><a href="/sofia/gresp/admin">RESPONSABLES</a></li><li><a href="/sofia/user/admin">UTILISATEURS</a></li><li><a href="/sofia/groups/admin">GROUPES</a></li><li><a href="/sofia/configuration/admin">CONFIGURATION</a></li><li><a href="/sofia/gdisp/generateId">GENERER ID GDISP</a></li><li><a href="/sofia/gaia/export">EXPORTS GAIA</a></li><li><a href="/sofia/gmodu/updatecomodugaia">UPDATE CODE MODULE GAIA</a></li><li><a href="/sofia/staticTables/manage">TABLES STATIQUES</a></li></ul></li>                        <li> <a href="mailto:sofia-paf.eafc@ac-poitiers.fr">CONTACT</a></li>
+                    </ul>
+                </div>
+            </div><!-- End menu -->
+            <div id="breadcrumbs" class="hidden-print">
+                <!-- breadcrumbs -->
+            </div>
+            
+            <div class="container" id="flash-message"></div>            
+            <div id="content">
+            
+<h1>Modifier le dispositif</h1>
+
+
+<script>
+$(function(){ 
+    // Nouveau module pour ce dispositif
+    $('#btn-create-gmodu').click(function(){
+        self.location.href = "/sofia/gmodu/create?pid=559&co_them=BDDE";
+    });
+    
+            
+    $("#Gdisp_atss").click(function(){
+        if($("#Gdisp_atss").prop('checked') == true) {
+            $("#Gdisp_encadrement").prop("checked", false);
+        } 
+        if($("#Gdisp_atss").prop('checked') == false) {
+            $("#Gdisp_atss").prop("checked", true);
+        }
+    });
+    $("#Gdisp_encadrement").click(function(){
+        if($("#Gdisp_encadrement").prop('checked') == true) {
+            $("#Gdisp_atss").prop("checked", false);
+        } 
+        if($("#Gdisp_encadrement").prop('checked') == false) {
+            $("#Gdisp_encadrement").prop("checked", true);
+        }
+    });
+
+    // Choix Gresp
+    $('#Gdisp_co_resp').change(updateNtcan);
+    // Choix type candidature
+    $('#Gdisp_co_tcan').change(updateNtcan);
+    
+    $("#gdisp-form").on("submit", function(){
+        // Pour chaque champ caché ayant data-required='1'
+        $("*[data-required='1']").filter(":hidden").each(function(){
+            // ajout champ caché des required not displayed
+            $("form#gdisp-form").append('<input type="hidden" name="required-not-displayed[]" value="'+$(this).attr('data-field')+'">');
+        });
+    });
+
+    // Init update
+    updateGresp('ACAD_3633', 'ACAD')
+
+    // Options relatives au champ type_paf
+    updateOptionsTypePaf();
+    
+    // Choix du type de PAF
+    $("#Gdisp_type_paf").on("change", function(){
+        updateGresp();
+        updateOptionsTypePaf();
+    });
+});
+
+function updateOptionsTypePaf() {
+    if($("#Gdisp_type_paf").val() == '') {
+        $("#div-degre_1,#div-atss-encadrement").hide();
+        $("#Gdisp_degre_2,#Gdisp_is_anim,#Gdisp_atss,#Gdisp_encadrement").prop("checked", false);
+        $("#Gdisp_co_tpla").val('');
+    }
+    if($("#Gdisp_type_paf").val() == '1D') {
+        $("#div-degre_1").show();
+        $("#div-atss-encadrement").hide();
+        $("#Gdisp_degre_2,#Gdisp_atss,#Gdisp_encadrement").prop("checked", false);
+        $("#Gdisp_co_tpla").val('');
+    }
+    if($("#Gdisp_type_paf").val() == '2D') {
+        $("#Gdisp_degre_2").prop("checked", true);
+        $("#div-degre_1,#div-atss-encadrement").hide();
+        $("#Gdisp_is_anim,#Gdisp_atss,#Gdisp_encadrement").prop("checked", false);
+        $("#Gdisp_co_tpla").val('');
+    }
+    if($("#Gdisp_type_paf").val() == 'ADM') {
+        $("#div-atss-encadrement").show();
+        $("#div-degre_1").hide();
+        $("#Gdisp_degre_2,#Gdisp_is_anim").prop("checked", false);
+    }
+}
+
+function updateGresp(co_resp = null, co_camp = null) {
+    if($("#Gdisp_type_paf").val()) {
+        $('#Gdisp_co_resp').empty();
+        $.ajax({
+            type: "GET",
+            url: baseUrl+`/gresp/getbyuser/pafType/${$("#Gdisp_type_paf").val()}`,
+            success: function(data){
+                // Option faire un choix
+                $('#Gdisp_co_resp').append('<option value="">Faire un choix</option>');
+                // Parse the returned json data
+                var opts = $.parseJSON(data);
+                // Use jQuery's each to iterate over the opts value
+                $.each(opts, function(i, d) {
+                    var selected = (co_resp == d.co_resp)?'selected="selected"':'';
+                    $('#Gdisp_co_resp').append('<option '+selected+' value="' + d.co_resp + '">' + d.fullname + '</option>');
+                });
+                updateNtcan(co_camp)
+            }
+        });
+    }
+}
+
+// Changement de choix de co_resp ou de co_tcan
+function updateNtcan(co_camp = null) {
+    // Si Gresp choisi ET candidature inviduelle choisis
+    if($('#Gdisp_co_tcan').val() == 1 && $('#Gdisp_co_resp').val() != '') {
+        $('#Gdisp_co_camp').empty();
+        // 2 premiers caractères du code responsable choisi
+        var prefix = $('#Gdisp_co_resp').val().substring(0,2);
+        $.ajax({
+            type: "POST",
+            url: baseUrl+"/ncamp/getbycode/code/"+prefix,
+            success: function(data){
+                // Option faire un choix
+                $('#Gdisp_co_camp').append('<option value="">Faire un choix</option>');
+                // Parse the returned json data
+                var opts = $.parseJSON(data);
+                // Use jQuery's each to iterate over the opts value
+                $.each(opts, function(i, d) {
+                    var selected = (co_camp == d.co_camp)?'selected="selected"':'';
+                    $('#Gdisp_co_camp').append('<option '+selected+' value="' + d.co_camp + '">' + d.lib_long + '</option>');
+                });
+            }
+        });
+        $('#div-co_camp').show();
+    } else {
+        $('#div-co_camp').hide();
+        $("#Gdisp_co_camp").val('');
+    }
+}
+</script>
+
+<div class="bs-callout bs-callout-info hidden-print">Thème actuel : B.1.3.4.4 NUMERIQUE PEDA. DANS LES APPRENTISSAGES</div>
+<div class="form">
+
+    <form id="gdisp-form" action="/sofia/gdisp/update/559" method="post">
+    <p class="note">Les champs avec <span class="required">*</span> sont obligatoires.</p>
+
+        
+    <div class="row" id="div-co_them">
+        <label for="Gdisp_co_them" class="required">Code du thème <span class="required">*</span></label>        <select style="max-width: 99%;" name="Gdisp[co_them]" id="Gdisp_co_them">
+<option value="">Faire un choix</option>
+<option value="AAAA">A.1.1.1.1 PES 1D</option>
+<option value="AAAB">A.1.1.1.2 PES TEMPS COMPLET 1D</option>
+<option value="AAAC">A.1.1.1.3 PES ENSEIGNEMENT PRIVE 1D</option>
+<option value="AABA">A.1.1.2.1 PEES PUBLICS</option>
+<option value="AABB">A.1.1.2.2 PEES PUBLICS TEMPS COMPLETS</option>
+<option value="AAC">A.1.1.3 ENS. DETACHEMENT  RECONVERSION DISC.</option>
+<option value="AADA">A.1.1.4.1 SPA 1D - 2D</option>
+<option value="AADB">A.1.1.4.2 STAR 1D - 2D</option>
+<option value="AADC">A.1.1.4.3 AED PRE-PROFESSIONALISATION</option>
+<option value="AAEA">A.1.1.5.1 ENSEIGNANTS NEO TITULAIRES 1D</option>
+<option value="AAEB">A.1.1.5.2 ENSEIGNANTS NEO TITULAIRES 2D</option>
+<option value="AAEC">A.1.1.5.3 ENSEIGNANTS CONTRACTUELS</option>
+<option value="AAFA">A.1.1.6.1 ENSEIGNANTS CONTRACTUELS 1D</option>
+<option value="AAFB">A.1.1.6.2 ENSEIGNANTS CONTRACTUELS 2D</option>
+<option value="ABA">A.1.2.1 ADAP A L&#039;EMPLOI DES SECRETAIRES</option>
+<option value="ABB">A.1.2.2 ADAP A L&#039;EMPLOI DES SG EPLE ET AGENTS COMPTABLES</option>
+<option value="ABC">A.1.2.3 ADAPA L EMPLOI DES ACTEURS RH</option>
+<option value="ABD">A.1.2.4 ADAP L EMPLOI DES PERSONNELS DEC</option>
+<option value="ABE">A.1.2.5 ADAP A L EMPLOI DES AGENTS DE LABORATOIRE</option>
+<option value="ABF">A.1.2.6 ADAP A L EMPLOI PERS SERVICES DECONCENTRES</option>
+<option value="ACA">A.1.3.1 MEDECINS</option>
+<option value="ACB">A.1.3.2 INFIRMIERS</option>
+<option value="ACC">A.1.3.3 ASSISTANTS SOCIAUX</option>
+<option value="ADA">A.1.4.1 AED</option>
+<option value="ADB">A.1.4.2 PSY EN EDO EDA</option>
+<option value="ADC">A.1.4.3 ADAPTATION A L EMPLOI PERSONNELS AESH</option>
+<option value="ADD">A.1.4.4 ASSISTANTS DE LANGUE</option>
+<option value="AEA">A.1.5.1 FORMATION STATUTAIRE ENCADREMENT PEDAGO</option>
+<option value="AEB">A.1.5.2 ENCADREMENT ADMINISTRATIF</option>
+<option value="AEC"> A.1.5.3 PERSONNELS ENCADREMENT FAISANT FONCTION</option>
+<option value="AFA">A.1.6.1 ASSISTANTS DE PREVENTION</option>
+<option value="AFB">A.1.6.2 MEMBRES DE COMITE SOC ET ECO CSE</option>
+<option value="AFC">A.1.6.3 RESP. DU BUREAU DES ENTREPRISES EN LY</option>
+<option value="AGA">A.1.7.1 CULTURE JURIDIQUE ET FONTX DE LA FONC. PU.</option>
+<option value="AGB">A.1.7.2 DROITS ET DEVOIRS DE L AGENT PUBLIC</option>
+<option value="AGC">A.1.7.3 LES TROIS FONCTIONS PUBLIQUES</option>
+<option value="AGD">A.1.7.4 CONNAISSANCE DU SYSTEME EDUCATIF</option>
+<option value="AGE">A.1.7.5 ENVIRONNEMENT PROFESSIONNEL</option>
+<option value="BBBB">B.1.1.1.1 PRINCIPES ET VALEURS DU SERVICE PUBLIC +</option>
+<option value="BBBC">B.1.1.1.2 LUTTE CONTRE LES DISCRIMINATIONS</option>
+<option value="BBBD">B.1.1.1.3 LAICITE</option>
+<option value="BBBE">B.1.1.1.4 EGALITE FEMME HOMME</option>
+<option value="BBBF">B.1.1.1.5 DIVERSITE</option>
+<option value="BBBG">B.1.1.1.6 MODERNISATION DU SERVICE PUBLIC</option>
+<option value="BBCB">B.1.1.2.1 SANTE ECOLOGIQUE</option>
+<option value="BBCC">B.1.1.2.2 DEVELOPPEMENT DURABLE</option>
+<option value="BBCD">B.1.1.2.3 SOBRIETE NUMERIQUE</option>
+<option value="BBDB">B.1.1.3.1 HYGIENE, SANTE ET SECURITE AU TRAVAIL</option>
+<option value="BBDC">B.1.1.3.2 PREVENTION DES RISQUES PSYCHOSO.</option>
+<option value="BBDD">B.1.1.3.3 GESTION DES RELATIONS ET COM PRO</option>
+<option value="BBDE">B.1.1.3.4 LUTTE CONTRE LE HARCELEMENT</option>
+<option value="BBDF">B.1.1.3.5 PREVENTION ET GESTION DE CRISE</option>
+<option value="BBEB">B.1.1.4.1 COMPETENCES NUM. PRO. DES AGENTS</option>
+<option value="BBEC">B.1.1.4.2 SECURITE REGULATION DE L ESPACE NUM.</option>
+<option value="BBED">B.1.1.4.3 IA : PRATIQUES ET USAGES PROF.</option>
+<option value="BBEE">B.1.1.4.4 ACCESSIBILITE NUMERIQUE</option>
+<option value="BBFB">B.1.1.5.1 COOPERATION LES DYNAMIQUES RESEAUX</option>
+<option value="BBFC">B.1.1.5.2 CO.DE L ENTREPRISE PARTENARIATS</option>
+<option value="BBFD">B.1.1.5.3 OUV EUROPEENNE ET INTERNATIONALE</option>
+<option value="BBFE">B.1.1.5.4 INNO RECHERCHE ET DEVELOPPEMENT</option>
+<option value="BCBA">B.1.2.1.1 DEMOTIVATION &amp; DECROCHAGE SCOLAIRE.</option>
+<option value="BCBB">B.1.2.1.2 AUTONOMIE ET TRAVAIL PERSO DE L ELEVE</option>
+<option value="BCBC">B.1.2.1.3 EDUCATION PRIORITAIRE</option>
+<option value="BCBD">B.1.2.1.4 DISPOSITIFS D AIDES AUX ELEVES</option>
+<option value="BCBE">B.1.2.1.5 ELEVES ALLOPHONES ET NOUV ARRIVES</option>
+<option value="BCBF">B.1.2.1.6 ELEVES EN GRDES DIFFICULT. DAPPRENTISS.</option>
+<option value="BCCA">B.1.2.2.1 CONCEPTION UNIV APPRENTISSAGES CUA</option>
+<option value="BCCB">B.1.2.2.2 STAGE MIN</option>
+<option value="BCCC">B.1.2.2.3 FORMATION CONTINUE DES ENS. SPE ASH</option>
+<option value="BCDA">B.1.2.3.1 EDUCATION MEDIAS INFORMATION EMI</option>
+<option value="BCDB">B.1.2.3.2 LUTTE CONTRE LES DISCRIMINATIONS</option>
+<option value="BCDC">B.1.2.3.3 MEMOIRE ET CITOYENNETE</option>
+<option value="BCDE">B.1.2.3.4 DEFENSE - CLASSES ENGAGEES SNU</option>
+<option value="BCDF">B.1.2.3.5 EDUCATION AU DEV DURABLE EDD</option>
+<option value="BCEA">B.1.2.4.1 PARCOURS EDUCATIF DE SANTE</option>
+<option value="BCEB">B.1.2.4.2 EDUC.VIE RELATIO. AFFECT.ET SEXUELLE</option>
+<option value="BCEC">B.1.2.4.3 PREVENTION DE LA SANTE</option>
+<option value="BCED">B.1.2.4.4 COMPETENCES PSYCHO-SOCIALES</option>
+<option value="BCEF">B.1.2.4.5 LUTTE CONTRE LE HARCELEMENT</option>
+<option value="BCFA">B.1.2.5.1 PEDAGOGIE DE L&#039;ORIENTATION</option>
+<option value="BCFB">B.1.2.5.2 CONTINUUM -5 + 3</option>
+<option value="BCFC">B.1.2.5.3 RELATION ECOLE-ENTREPRISE</option>
+<option value="BCGA">B.1.2.6.1 PREAC</option>
+<option value="BCGB">B.1.2.6.2 COLLEGE AU CINEMA</option>
+<option value="BCGC">B.1.2.6.3 LYCEE AU CINEMA</option>
+<option value="BCGD">B.1.2.6.3 AUTRES DISPOSITIFS EAC</option>
+<option value="BDAA">B.1.3.1.1 DISCIPLINAIRE ARTS</option>
+<option value="BDAB">B.1.3.1.2 DISCIPLINAIRE ENS-DOCUMENTALISTE</option>
+<option value="BDAC">B.1.3.1.3 DISCIPLINAIRE EPS</option>
+<option value="BDAD">B.1.3.1.4 DISCIPLINAIRE HISTOIRE-GEOGRAPHIE</option>
+<option value="BDAE">B.1.3.1.5 DISCIPLINAIRE LANGUES VIVANTES</option>
+<option value="BDAF">B.1.3.1.6 DISCIPLINAIRE HLP</option>
+<option value="BDAG">B.1.3.1.7 DISCIPLINAIRE LETTRES</option>
+<option value="BDAH">B.1.3.1.8 DISCIPLINAIRE FILIERES TECHNOLOGIQUES</option>
+<option value="BDAI">B.1.3.1.9 DISCIPLINAIRE PHILOSOPHIE</option>
+<option value="BDAJ">B.1.3.1.10 DISCIPLINAIRE MATHS</option>
+<option value="BDAK">B.1.3.1.11 DISCIPLINAIRE SCIENCES</option>
+<option value="BDAL">B.1.3.1.12 DISCIPLINAIRE SES</option>
+<option value="BDBA">B.1.3.2.1 TRANSVERSAL METIERS VP</option>
+<option value="BDBB">B.1.3.2.2 EG-HOTELLERIE RESTAURATION</option>
+<option value="BDBC">B.1.3.2.3 EG-RELATION CLIENT</option>
+<option value="BDBD">B.1.3.2.4 EGTRANSPORT/LOGIST/SECPREV/ECOGEST/ECODR</option>
+<option value="BDBE">B.1.3.2.5 EG-ALIMENTATION/GEST.ADMIN</option>
+<option value="BDBF">B.1.3.2.6 SBSSA-SOCIALES BIEN ETRE</option>
+<option value="BDBG">B.1.3.2.7 SBSSA-SANITAIRE HYGIENE EGPA</option>
+<option value="BDBH">B.1.3.2.8 STI-AUTOMOBILE...</option>
+<option value="BDBI">B.1.3.2.9 STI-ELECT.PHOTONIQUE...</option>
+<option value="BDBJ">B.1.3.2.10 STI-CUIR MODE CHAUDRONNERIE...</option>
+<option value="BDBK">B.1.3.2.11 STI-BATIMENT...</option>
+<option value="BDBL">B.1.3.2.12 STI-MAT.PLASTIQUES COMPOSITE</option>
+<option value="BDBM">B.1.3.2.13 STI-BOIS-TRAVAUX PUBLICS...</option>
+<option value="BDBN">B.1.3.2.14 STI-.GENIE THERM.ET MECAN.HORTIC....</option>
+<option value="BDBO">B.1.3.2.15 STI-DISCIPLINAIRE ARTS APP. VP</option>
+<option value="BDBP">B.1.3.2.16 STI-FORMATION TRANSVERSALE</option>
+<option value="BDBQ">B.1.3.2.17 DISCIPLINAIRE MATHS-SCIENCES VP</option>
+<option value="BDBR">B.1.3.2.18 DISCIPLINAIRE LETTRES-HG VP</option>
+<option value="BDBS">B.1.3.2.19 DISCIPLINAIRE LETTRES-LANGUES VP</option>
+<option value="BDBT">B.1.3.2.20 FORMATION CONTINUE DES DDFPT</option>
+<option value="BDBU">B.1.3.2.21 ENSEIGNER LA SANTE SECURITE AU TRAVAIL</option>
+<option value="BDC">B.1.3.3 ENSEIGNEMENT SUPERIEUR</option>
+<option value="BDDA">B.1.3.4.1 EVALUATION DIFFERENCIATION PEDAGOGIQUE</option>
+<option value="BDDB">B.1.3.4.2 COMPETENCES LANGAGIERES</option>
+<option value="BDDC">B.1.3.4.3 APPORTS DE LA RECHERCHE ET APPRENTISSAGE</option>
+<option value="BDDE" selected="selected">B.1.3.4.4 NUMERIQUE PEDA. DANS LES APPRENTISSAGES</option>
+<option value="BDEA">B.1.3.5.1 FORMATION CONTINUE DES CPE</option>
+<option value="BDEB">B.1.3.5.2 FORMATION CONTINUE DES AED</option>
+<option value="BDEC">B.1.3.5.3 FORMATION CONTINUE DES AESH</option>
+<option value="BDED">B.1.3.5.4 FORMATION CONTINUE DES PSY EN</option>
+<option value="BDFA">B.1.3.6.1 PLAN FRANCAIS</option>
+<option value="BDFB">B.1.3.6.2 PLAN MATHEMATIQUES</option>
+<option value="BDFC">B.1.3.6.3 EVALUATION D ECOLE</option>
+<option value="BDFD">B.1.3.6.4 ANIMATION PEDAGOGIQUE EN RESIDENCE</option>
+<option value="BDFE">B.1.3.6.5 MATERNELLE</option>
+<option value="BDFF">B.1.3.6.6 FORMATION CONTINUE DES DIR. ECOLE</option>
+<option value="BDGA">B.1.3.7.1 COMPETENCES REDACTIONNELLES</option>
+<option value="BDGB">B.1.3.7.2 OUTILS BUREAUTIQUES</option>
+<option value="BDGC">B.1.3.7.3 FONCTION FINANCIERE ET COMPTABLE</option>
+<option value="BDGD">B.1.3.7.4 FONCTION RH</option>
+<option value="BDGE">B.1.3.7.5 FONCTION EXAMEN ET CONCOURS</option>
+<option value="BDGF">B.1.3.7.6 AUTRES PERSONNELS ADMINISTRATIFS</option>
+<option value="BDHA">B.1.3.8.1 FOR CONTINUE INTERCAT. PERS. SOC SANTE</option>
+<option value="BDHB">B.1.3.8.2 FORMATION CONTINUE INFIRMIER</option>
+<option value="BDHC">B.1.3.8.3 FORMATION CONTINUE MEDECIN</option>
+<option value="BDHD">B.1.3.8.4 FORMATION CONTINUE ASSISTANT SOCIAL</option>
+<option value="BDIA">B.1.3.9.1 FORMATION CONTINUE DES AGENTS DE LABO</option>
+<option value="BDIB">B.1.3.9.2 FOR CONTINUE DES AGENTS SERVICES INFO</option>
+<option value="BDIC">B.1.3.9.3 FORCONTINUE AUTRES PERSONNELS TECH</option>
+<option value="BDJA">B.1.3.10.1 COMPETENCES MANAGERIALES</option>
+<option value="BDJB">B.1.3.10.2 DIALOGUE SOCIAL</option>
+<option value="BDJC">B.1.3.10.3 FORMATION TRANSITIONS PRO.</option>
+<option value="BDJD">B.1.3.10.4 OUTILS METIERS</option>
+<option value="BDJE">B.1.3.10.5 CONDUITE DU CHANGEMENT</option>
+<option value="BDJF">B.1.3.10.6 PILOTAGE PEDAGOGIQUE</option>
+<option value="BEA">B.1.4.1 COORDINATION DE LA FORMATION</option>
+<option value="BEB">B.1.4.2 ENTRETIENS DANS LE CADRE DU DAME</option>
+<option value="CAAA">C.1.1.1.1 PREPARATION AGREGATION INTERNE</option>
+<option value="CAAB">C.1.1.1.2 PREPARATION CAPES INTERNE</option>
+<option value="CAB">C.1.1.2 CONCOURS ADMINISTRATIF &amp; TECHNICIEN</option>
+<option value="CAC">C.1.1.3 CONCOURS SANTE &amp; SOCIAL</option>
+<option value="CAD">C.1.1.4 CONCOURS ENCADREMENT PEDAGOGIQUE</option>
+<option value="CBAA">C.1.2.1.1 PARCOURS PREPARATION CAPPEI</option>
+<option value="CBAB">C.1.2.1.2 VAEP CAPPEI</option>
+<option value="CBB">C.1.2.2 DDEEAS</option>
+<option value="CBC">C.1.2.3 PARCOURS PREPARATION CPLDS</option>
+<option value="CCAA">C.1.3.4.1 PACD/PPR/ MOBILITE/EVOLUTION PROFESSIONNELLE</option>
+<option value="CCB">C.1.3.2 AGIR POUR SON EVOLUTION PRO</option>
+<option value="CCC">C.1.3.3 ACCOMPAGNEMENT MAE</option>
+<option value="CCD">C.1.3.4 UTILISER SON CPF</option>
+<option value="DAA">D.1.1.1 PARCOURS PREPARATION CAFFA</option>
+<option value="DAB">D.1.1.2 PARCOURS PREPARATION CAFIPEMF</option>
+<option value="DBA">D.1.2.1 FONDAMENTAUX DU FORMATEUR</option>
+<option value="DBB">D.1.2.2 APPRO. DES COMPETENCES DU FORMATEUR</option>
+<option value="DBC">D.1.2.3 COLLECTIFS PROFESSIONNELS APPRENANTS</option>
+<option value="DBD">D.1.2.4 RECHERCHE ET INNO POUR LA FORMATION</option>
+<option value="DCA">D.1.3.1 FORMATION DES ACCOMPAGNATEURS (CARDIE...)</option>
+<option value="DCB">D.1.3.2 FORMATION DES REFERENTS DU D.A.M.E</option>
+<option value="DCC">D.1.3.3 FORMATION DES MENTORS</option>
+<option value="DDA">D.1.4.1 FONDTX DU TUTORAT</option>
+<option value="DDB">D.1.4.2 APPROF DES COMPETENCES DU TUTEUR</option>
+<option value="DEA">D.1.5.1 ETRE MEMBRE D&#039;UN JURY DE VAE</option>
+<option value="DEB">D.1.5.2 ETRE MEMBRE D&#039;UN JURY DE CONCOURS</option>
+</select>            </div>
+    
+    <div class="row" id="div-type_paf">
+        <label for="Gdisp_type_paf" class="required">Type PAF <span class="required">*</span></label><select style="max-width: 99%;" disabled="disabled" name="Gdisp[type_paf]" id="Gdisp_type_paf">
+<option value="">Faire un choix</option>
+<option value="2D" selected="selected">Second degré</option>
+<option value="ADM">Administratif</option>
+</select>            </div>
+    
+    <div id="div-degre_1" class="row">
+    <fieldset class="col-md-3">
+    <legend>1<sup>er</sup> degré</legend>
+        <div class="col-md-8">
+            <div class="row" id="div-is_anim">
+                <label for="Gdisp_is_anim">Animation pédagogique</label>                <p><small>Avec numerus clausus</small></p>                <input id="ytGdisp_is_anim" type="hidden" value="0" name="Gdisp[is_anim]" /><input value="1" name="Gdisp[is_anim]" id="Gdisp_is_anim" type="checkbox" />                            </div>
+        </div>
+    </fieldset>
+    </div>
+    
+    <div id="div-atss-encadrement" class="row">
+    <fieldset class="col-md-3">
+    <legend>ATSS / Encadrement</legend>
+        <div class="col-md-4">
+            <div class="row" id="div-atss">
+                <label for="Gdisp_atss">ATSS</label><input id="ytGdisp_atss" type="hidden" value="0" name="Gdisp[atss]" /><input value="1" name="Gdisp[atss]" id="Gdisp_atss" type="checkbox" />            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="row" id="div-encadrement">
+                <label for="Gdisp_encadrement">Encadrement</label>                <input id="ytGdisp_encadrement" type="hidden" value="0" name="Gdisp[encadrement]" /><input value="1" name="Gdisp[encadrement]" id="Gdisp_encadrement" type="checkbox" />                            </div>
+        </div>
+        <div id="div-co_tpla">
+            <label for="Gdisp_co_tpla" class="required">Type de plan <span class="required">*</span></label>            <select data-required="1" data-field="co_tpla" name="Gdisp[co_tpla]" id="Gdisp_co_tpla">
+<option value="">Faire un choix</option>
+<option value="P">FORMATION 1ER DEGRE</option>
+<option value="S">FORMATION 2ND DEGRE</option>
+<option value="A">FORMATION ATSS</option>
+<option value="E">FORMATION ENCADREMENT</option>
+<option value="C">FORMATION INTERCATEGORIELLE</option>
+<option value="D">FORMATION INTERDEGRE</option>
+</select>                    </div>
+    </fieldset>
+    </div>
+    
+    <div class="row" id="div-lib">
+        <label for="Gdisp_lib" class="required">Libellé <span class="required">*</span></label>        <input size="60" maxlength="255" name="Gdisp[lib]" id="Gdisp_lib" type="text" value="ENSN - CYCLE DE WEBINAIRES USAGES PEDAGO ENT" />            </div>
+
+    <div class="row" id="div-co_resp">
+        <label for="Gdisp_co_resp" class="required">Responsable <span class="required">*</span></label>        <select name="Gdisp[co_resp]" id="Gdisp_co_resp">
+<option value="">Faire un choix</option>
+</select>            </div>
+
+    <div class="row" id="div-co_tcan">
+        <label for="Gdisp_co_tcan" class="required">Type de candidature <span class="required">*</span></label><select disabled="disabled" name="Gdisp[co_tcan]" id="Gdisp_co_tcan">
+<option value="">Faire un choix</option>
+<option value="1" selected="selected">AVEC CANDIDATURE INDIVIDUELLE</option>
+<option value="2">AVEC CANDIDATURE COLLECTIVE</option>
+<option value="3">PUBLIC DESIGNE</option>
+</select>            </div>
+    
+    <div class="row" id="div-co_camp"><label for="Gdisp_co_camp" class="required">Campagne <span class="required">*</span></label><select data-required="1" data-field="co_camp" name="Gdisp[co_camp]" id="Gdisp_co_camp">
+<option value="">Faire un choix</option>
+</select></div>
+    <div class="row" id="div-co_objt">
+        <label for="Gdisp_co_objt" class="required">Objectif de formation <span class="required">*</span></label>        <select name="Gdisp[co_objt]" id="Gdisp_co_objt">
+<option value="">Faire un choix</option>
+<option value="35">ACCOMPAGNEMENT AU BILAN DE CARRIERE</option>
+<option value="26">ACCOMPAGNEMENT AUX BILANS DE C0MPETENCES</option>
+<option value="28">ACCOMPAGNEMENT CONGES DE FORMATION</option>
+<option value="29">ACCOMPAGNEMENT RAEP</option>
+<option value="27">ACCOMPAGNEMENT VAE</option>
+<option value="23">ADAPTATION A EVOLUTION PREVISIBLE DES METIERS</option>
+<option value="22">ADAPTATION IMMEDIATE AU POSTE DE TRAVAIL</option>
+<option value="34">CONCEPTION ET ORGANISATION DE LA FORMATION</option>
+<option value="24" selected="selected">DEVELOPT DES QUALIFICATIONS OU ACQUIS. NVELLES</option>
+<option value="33">DEVT COMPETENCES LIEES ACTIVITES FORMATION</option>
+<option value="32">ELABORATION DE RESSOURCES</option>
+<option value="99">FONCTIONNEMENT</option>
+<option value="30">FORMATION DIPLOMANTE</option>
+<option value="21">FORMATION PROFESSIONNELLE STATUTAIRE</option>
+<option value="31">PERIODE PROFESSIONNALISATION (2NDE CARRIERE ...)</option>
+<option value="25">PREPARATION AUX EXAMENS ET CONCOURS</option>
+</select>            </div>
+
+    <div class="row" id="div-lobjt">
+        <label for="Gdisp_lobjt" class="required">Objectifs pédagogiques <span class="required">*</span></label>        <textarea rows="6" cols="50" name="Gdisp[lobjt]" id="Gdisp_lobjt">Favoriser l’appropriation des usages pédagogiques de l&#039;ENT Lycée Connecté en mettant en lumière des pratiques concrètes et innovantes, afin d’accompagner les enseignants dans l’intégration efficace de ces outils au service des gestes pédagogiques</textarea>            </div>
+    
+    <div class="row buttons">
+        <input class="btn btn-primary" type="submit" name="yt0" value="Enregistrer" />        <input id="btn-create-gmodu" class="btn btn-primary" name="yt1" type="button" value="Créer un nouveau module pour ce dispositif" />        <input id="btn-annuler" class="btn btn-default" data-return-url="/sofia/nthem/treeview" name="yt2" type="button" value="Fermer" />    </div>
+
+</form>
+</div><!-- form -->            </div><!-- content -->
+            <footer>
+                Académie de Poitiers - Sofia            </footer><!-- footer -->
+        </div><!-- shadow -->
+
+    <script type="text/javascript">
+/*<![CDATA[*/
+jQuery(function($) {
+$(function(){ $("#select-year").on("change", function(){$.ajax({url: baseUrl+"/administration/changeYear/year/"+$(this).val()}).done(function(){self.location.reload();});;});});
+});
+/*]]>*/
+</script>
+</body>
+</html>

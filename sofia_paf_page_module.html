@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="/sofia/assets/ead43241/jui/css/base/jquery-ui.css" />
+<script type="text/javascript" src="/sofia/assets/ead43241/jquery.min.js"></script>
+<script type="text/javascript" src="/sofia/js/men-2012/bootstrap.js?201805111357"></script>
+<script type="text/javascript" src="/sofia/js/men-2012/app.js?201805111357"></script>
+<script type="text/javascript" src="/sofia/js/men-2012/treeview/jquery.treeview.js?201805111357"></script>
+<script type="text/javascript" src="/sofia/js/men-2012/jquery.cookie.js?201805111357"></script>
+<script type="text/javascript" src="/sofia/js/men-2012/jquery-ui.min.js?201805111357"></script>
+<script type="text/javascript" src="/sofia/js/men-2012/jquery.multiple.select.js?201805111357"></script>
+<title>SOFIA</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="/sofia/img/favicon.png" />
+
+        <link rel="stylesheet" type="text/css" href="/sofia/css/men-2012/bootstrap.css?201805111357" media="screen,print" /><link rel="stylesheet" type="text/css" href="/sofia/css/men-2012/main.css?201805111357" media="screen" /><link rel="stylesheet" type="text/css" href="/sofia/css/men-2012/font-awesome.min.css?201805111357" media="screen,print" /><link rel="stylesheet" type="text/css" href="/sofia/css/men-2012/jquery.treeview.css?201805111357" media="screen" /><link rel="stylesheet" type="text/css" href="/sofia/css/men-2012/jquery-ui.min.css?201805111357" media="screen" /><link rel="stylesheet" type="text/css" href="/sofia/css/men-2012/multiple-select.css?201805111357" media="screen" /><link rel="stylesheet" type="text/css" href="/sofia/css/men-2012/styles.css?201805111357" media="screen,print" /><link rel="stylesheet" type="text/css" href="/sofia/css/men-2012/print.css?201805111357" media="print" />    </head>
+
+    <body><script type="text/javascript">
+/*<![CDATA[*/
+var baseUrl='/sofia';
+/*]]>*/
+</script>
+
+        <div class="container">
+            <div id="top" class="hidden-print">
+                <select name="select-year" id="select-year" class="hidden-print"><option value="currentYear">2026-2027</option><option value="previousYear">2025-2026</option></select><a href="/sofia/../arena" title="Retourner au portail"><i class="fa fa-chevron-left"></i>&nbsp;&nbsp;Retour au portail</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/sofia/site/logout" title="Déconnexion"><i class="fa fa-power-off"></i>&nbsp;&nbsp;mpino-didine</a>&nbsp;|&nbsp;<a title="Vider le cache" href="#" id="clear-cache"><i class="fa fa-cc"></i></a>            </div>
+            <div id="header">
+                <div id="header-left">
+                    <img alt="Logo Académie Bordeaux" src="/sofia/img/men-2012/logo-et-marianne.jpg" style="max-height: 130px;"/>
+                </div>
+                <div id="header-middle">
+                    <h1>
+                        SOFIA                        2026-2027                    </h1>
+                    <h2>Suivi et Organisation des Formations Internes à l'Académie</h2>
+                </div>
+                <div id="header-right">
+                </div>
+            </div>
+            <div class="hidden-print navbar navbar-inverse ">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-inverse-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse navbar-inverse-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="/sofia/">ACCUEIL</a></li><li><a href="/sofia/site/selectpaf">PLAN ACADEMIQUE DE FORMATION</a></li><li><a href="/sofia/gresp/budget">MES OFFRES</a></li><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">MES INSCRIPTIONS<span class="caret"></span></a><ul class="dropdown-menu" role="menu"><li><a href="/sofia/inscriptions/admin/type/eple">Par l'EPLE</a></li><li><a href="/sofia/inscriptions/admin/type/zap">En tant que coordonnateur de ZAP</a></li><li><a href="/sofia/inscriptions/exportCsv">Exporter en CSV</a></li></ul></li><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">ADMIN<span class="caret"></span></a><ul class="dropdown-menu" role="menu"><li><a href="/sofia/gresp/admin">RESPONSABLES</a></li><li><a href="/sofia/user/admin">UTILISATEURS</a></li><li><a href="/sofia/groups/admin">GROUPES</a></li><li><a href="/sofia/configuration/admin">CONFIGURATION</a></li><li><a href="/sofia/gdisp/generateId">GENERER ID GDISP</a></li><li><a href="/sofia/gaia/export">EXPORTS GAIA</a></li><li><a href="/sofia/gmodu/updatecomodugaia">UPDATE CODE MODULE GAIA</a></li><li><a href="/sofia/staticTables/manage">TABLES STATIQUES</a></li></ul></li>                        <li> <a href="mailto:sofia-paf.eafc@ac-poitiers.fr">CONTACT</a></li>
+                    </ul>
+                </div>
+            </div><!-- End menu -->
+            <div id="breadcrumbs" class="hidden-print">
+                <!-- breadcrumbs -->
+            </div>
+            
+            <div class="container" id="flash-message"></div>            
+            <div id="content">
+            
+<h1>Modifier le module</h1>
+
+
+<script>
+$(function(){ 
+    // Cacher organisme convention si checkbox convention non cochée
+    if($('#Gmodu_convention').prop('checked') == false) {
+        $('#div-orga_convention').hide();
+        $('#div-cout_convention_perso').hide();
+    }
+
+    // Actualiser nthema en fonction de nprna
+/*   $('#Gmodu_co_prna').change(updateNthema);
+
+    function updateNthema(co_thema = null) {
+        const prefix = $('#Gmodu_co_prna').val();
+        if(prefix) {
+            $.ajax({
+                type: "GET",
+                url: baseUrl + "/nthema/getbycoprna/code/" + prefix,
+                success: function (data) {
+                    // Vider liste
+                    $('#Gmodu_co_thema').empty();
+                    // Option faire un choix
+                    $('#Gmodu_co_thema').append('<option value="">Faire un choix</option>');
+                    // Parse the returned json data
+                    var opts = $.parseJSON(data);
+                    // Use jQuery's each to iterate over the opts value
+                    $.each(opts, function (i, d) {
+                        var selected = (co_thema == d.co_thema) ? 'selected="selected"' : '';
+                        $('#Gmodu_co_thema').append('<option ' + selected + ' value="' + d.co_thema + '">' + d.co_thema + '-' + d.lib_long + '</option>');
+                    });
+                }
+            });
+        }
+    }
+ */   
+    // Changement checkbox convention
+    $('#Gmodu_convention').change(function(){
+        if($('#Gmodu_convention').prop('checked')) {
+            $('#div-orga_convention').show();
+            $('#div-cout_convention_perso').show();
+        }else{
+            $('#div-orga_convention').hide();
+            $('#Gmodu_orga_convention').val('');
+            $('#div-cout_convention_perso').hide();
+            $('#Gmodu_cout_convention_perso').val('');
+        }
+    });
+    
+    // Bouton radio regroument GAIA
+    $("[id^=Gmodu_co_regr_]").click(function(){
+        // Pour chaque element de selection de perimetre
+        $("[id^=perim-nregr-]").each(function(index, value) {
+            // Si type SELECT
+            if($(this).prop('tagName') == 'SELECT') {
+                // Cacher le multiselect qui suit
+                $(this).next().hide();
+                // Tout décocher dans le multiselect associé
+                $(this).multipleSelect('uncheckAll');
+                // Disable le multiselect associé
+                $(this).multipleSelect('disable');
+            } else {
+                // Cacher elem.
+                $(this).hide();
+            }
+
+        });
+        
+        // Si element à afficher de type SELECT
+        if($("#perim-nregr-"+$(this).data('co_regr')).prop('tagName') == 'SELECT') {
+            // Enable le multiselect associé
+            $("#perim-nregr-"+$(this).data('co_regr')).multipleSelect('enable');
+            // Afficher le multiselect qui suit
+            $("#perim-nregr-"+$(this).data('co_regr')).next().show();
+        } else {
+            // Afficher elem.
+            $("#perim-nregr-"+$(this).data('co_regr')).show();
+        }
+    });
+    
+    // selectbox sous forme de plugin
+    $('#Gmodu_co_disp').multipleSelect({single: true, placeholder: "Faire un choix", filter: true, countSelected: "# sur %", minimumCountSelected: 1, width: 400, maxHeight: 300});
+    $('#gmodufiltres').multipleSelect({single: false, placeholder: "Faire un choix", filter: false, selectAllText: "Tout", allSelected: "Tout", countSelected: "# sur %", minimumCountSelected: 1, width: 400, maxHeight: 300});
+    $('#cataloguesForm').multipleSelect({filter: true, countSelected: "# sur %", selectAllText: "Tout", allSelected: "Tout", minimumCountSelected: 0, width: 200, maxHeight: 300});
+    
+    $("#gmodu-form").on("submit", function(){
+        
+        $("*[data-required='1']").filter(":hidden").each(function(){
+            // ajout champ caché des required not displayed
+            $("form#gmodu-form").append('<input type="hidden" name="required-not-displayed[]" value="'+$(this).attr('data-field')+'">');
+        });
+
+    });
+    
+    //Calcul du cout en ajax
+    // Changement d'un champ ayant data-cout="cout" en data attribute
+    //@todo adapter la fonction au type de champ
+    $( "[data-cout='change']" ).on( "change", calculBudget);
+    $( "[data-cout='click']" ).on( "click", calculBudget);
+    
+    function calculBudget(){
+        $.ajax({
+            type: "POST",
+            url: baseUrl+"/gmodu/ajaxbudget/moduleExclu/2541",
+            data: $('#gmodu-form').serialize(),
+            }).done(function(response){
+                var arrayJson =  $.parseJSON(response);
+                $('#coutVac').html(arrayJson.coutVac);
+                $('#coutFonc').html(arrayJson.coutFonc);
+                $('#vacDispo').html(arrayJson.vacDispo);
+                $('#foncDispo').html(arrayJson.foncDispo);
+                if(arrayJson.valide > 0) {
+                    $('#cout_previsionnel').css( "background-color", "#DFF0D8" );
+                }
+                else {
+                    $('#cout_previsionnel').css( "background-color", "#eed3d7" );
+                }
+                $('#erreurCoutPrevisionnel').html(arrayJson.erreur);
+                $('#calcul_cout_prestation_perso').html(arrayJson.calcul_cout_prestation_perso);
+                $('#calcul_cout_organisme_perso').html(arrayJson.calcul_cout_organisme_perso);
+                $('#calcul_cout_exceptionnel').html(arrayJson.calcul_cout_exceptionnel);
+                $('#calcul_cout_logistique').html(arrayJson.calcul_cout_logistique);
+                
+        });
+    }
+    calculBudget();
+
+    // Update
+  /*  updateNthema('6A01');*/
+});
+</script>
+
+<div class="bs-callout bs-callout-info hidden-print">
+Dispositif : ENSN - CYCLE DE WEBINAIRES USAGES PEDAGO ENT [<span class="italic">AVEC CANDIDATURE INDIVIDUELLE]</span></div>
+
+<div class="form">
+
+    <form id="gmodu-form" action="/sofia/gmodu/update/2541" method="post">
+    <p class="note">Les champs avec <span class="required">*</span> sont obligatoires pour l'import de GAIA.</p>
+
+        
+    <fieldset>
+    <legend>Description</legend>
+    
+    <div class="row" id="div-co_disp">
+        <label for="Gmodu_co_disp" class="required">Dispositif parent <span class="required">*</span></label>        <select style="max-width: 99%;" name="Gmodu[co_disp]" id="Gmodu_co_disp">
+<option value="">Faire un choix</option>
+<option value="405"> FC-ADMIN-EVALUER SES COMPETENCES NUMERIQUES PIX</option>
+<option value="847"> FC-ADMIN-MENTOR_COMMUNIQUER SUR RESEAUX SOCIAUX</option>
+<option value="848"> FC-ADMIN-MENTOR_MENER UNE VEILLE INFORMATIONNELLE</option>
+<option value="665">ACCP FDF-ACCESSIBILITE PEDAGOGIQUE</option>
+<option value="529">ACCP-ACCESSIBILITE PEDAGOGIQUE</option>
+<option value="961">AESH FC 17_ DISPOSITIF ULIS</option>
+<option value="963">AESH FC 17_ POSTURE ET GESTES PROFESSIONNELS 1 CI</option>
+<option value="964">AESH FC 17_ACCOMP ELEVE PORTEUR DE TROUBLES CI</option>
+<option value="960">AESH FC 17_PIAL PILOTAGE COORDINATION</option>
+<option value="724">AGIR POUR MON EVOLUTION PROFESSIONNELLE</option>
+<option value="151">APC-TECHN-ECHANGES PRATIQUES PERSONNELS LABO</option>
+<option value="1034">CARDIE DEVELOPPER DES COMPETENCES D&#039;ACCOMPAGNATEUR</option>
+<option value="913">CARDIE JOURNEE ACADEMIQUE DE L INNOVATION </option>
+<option value="286">CARDIE MERCREDIS DE LA RECHERCHE</option>
+<option value="906">CARDINNOV@</option>
+<option value="168">CARSAT - ES&amp;ST-DEVENIR ACTEUR EN PRAP IBC</option>
+<option value="170">CARSAT - FDF - DEVENIR FORMATEUR PRAP IBC</option>
+<option value="68">CARSAT - M1 : COMPETENCES DE BASE EN PREVENTION</option>
+<option value="274">CMQ - PEDAGOGIES IMMERSIVES EN COLLEGES ET LGT</option>
+<option value="276">CMQ - PEDAGOGIES IMMERSIVES EN LYCEES PRO</option>
+<option value="490">CONTINUUM IMMERSIONS LGT/LP</option>
+<option value="492">CONTINUUM IMMERSIONS SUP (CODA)</option>
+<option value="640">CPE- FORMATION LOGICIEL DE VIE SCOLAIRE PRONOTE</option>
+<option value="1083">CPE- GRAFPE CHARENTE</option>
+<option value="1084">CPE- GRAFPE DEUX SEVRES</option>
+<option value="636">DISPOSITIF DEVOIRS FAITS TRAVAIL PERSONNEL ELEVE</option>
+<option value="230">DPC-AS-JOURNEE ANNUELLE DES SERVICES SOCIAUX ACAD</option>
+<option value="357">EAC - DANSE: PARTENARIAT CULTUREL</option>
+<option value="310">EAC ARCHITECTURE - L&#039;ESPACE SOCIAL ET SON PARTAGE </option>
+<option value="279">EAC ARTS -  LES BIENFAITS DE L&#039;EAC</option>
+<option value="326">EAC ARTS - JOURNÉE ARTS ET CULTURE DE l&#039;ENS SUP</option>
+<option value="505">EAC ARTS PLASTIQUES - 1% À LA LOUPE</option>
+<option value="506">EAC ARTS PLASTIQUES - ARTS PLASTIQUES ET ADAGE</option>
+<option value="280">EAC BD - CAP VERS LA BD</option>
+<option value="307">EAC CIRQUE-SE FORMER AUX ARTS DU CIRQUE</option>
+<option value="322">EAC PATATE Patrimoine, Archéologie</option>
+<option value="343">EAC THÉÂTRE -  LE THÉÂTRE EN CLASSE ENTIÈRE</option>
+<option value="341">EAC THÉÂTRE - DU TEXTE À LA REPRÉSENTATION</option>
+<option value="355">EAC- DANSE: CHECK: SE RENCONTRER ET EXPLORER</option>
+<option value="311">EAC-CONSTRUIRE PROJET AVEC UN ARTISTE PLASTICIEN</option>
+<option value="545">EC-PRO-SA-MISE EN OEUVRE DU PROG. EAS-EVARS</option>
+<option value="502">ECOGEST VP L&#039;IA EN COMMERCE ET VENTE</option>
+<option value="616">EDD - CONSTRUIRE UN PARCOURS EDD</option>
+<option value="622">EDD - DÉFIS XXI EME SIÈCLE : LES ENJEUX DE L&#039;EDD</option>
+<option value="617">EDD - DES ODD POUR CONSTRUIRE UN PROJET EDD</option>
+<option value="623">EDD-PLASTIQUE A LA LOUPE  AVEC LA FONDATION TARA</option>
+<option value="649">EI-PRENDRE EN COMPTE LES ELEVES HAUT POTENTIEL</option>
+<option value="898">EMC - CITOYENNETE ET DROIT : PASSEPORT EDUCDROIT</option>
+<option value="632">EMC - PARCOURS EMC</option>
+<option value="1029">EMI - FDF - WEBRADIO ET WEBTV</option>
+<option value="363">EMI - JOURNALISME ET IA</option>
+<option value="323">EMI - SA - RÉSEAUX SOCIAUX ET SANTÉ MENTALE</option>
+<option value="1028">EMI - TRACAD - INGÉRENCES INFORMATIONNELLES </option>
+<option value="559" selected="selected">ENSN - CYCLE DE WEBINAIRES USAGES PEDAGO ENT</option>
+<option value="557">ENSN - ENRICHIR SA PRATIQUE AVEC ELEA (INDIV)</option>
+<option value="564">ENSN - ENSEIGNER À L&#039;ÈRE DE L&#039;IA (INDIV)</option>
+<option value="546">ENSN-GESTES PÉDA AUGMENTÉS PAR LE NUMÉRIQUE</option>
+<option value="584">ENSN-INTEGRER DE NOUVEAUX CONCEPTS A L&#039;ERE DE L&#039;IA</option>
+<option value="579">ENSN-PRISE EN COMPTE L’ACTION TUTORALE À DISTANCE</option>
+<option value="194">EPS - ENSEIGNER PROCESSUS CREATION ARTISTIQUE</option>
+<option value="196">EPS - GESTES DE PREMIERS SECOURS APPLIQES A L EPS</option>
+<option value="198">EPS- ADAPTER LES NX PROGRAMMES A L ETABLISSEMENT</option>
+<option value="66">ES&amp;ST-DEVENIR  SAUVETEUR SECOURISTE DU TRAVAIL</option>
+<option value="275">FC ENC ANIMATION DES COLLECTIFS DE TRAVAIL</option>
+<option value="300">FC ENC DEVELOPPER UNE STRATEGIE IA EN EPLE</option>
+<option value="835">FC ENC PARCOURS CADRE RESSOURCES ECOLE INCLUSIVE</option>
+<option value="829">FC ENC PILOTAGE PEDA DES COLLEGES EN PROGRES</option>
+<option value="639">FC-ADMIN- GESTION DU STRESS &amp; DES EMOTIONS </option>
+<option value="655">FC-ADMIN-B.A-B.A-CLIMAT ET BIODIVERSITE</option>
+<option value="231">FC-ADMIN-BUREAUTIQUE</option>
+<option value="658">FC-ADMIN-ESSENTIEL ACCESSIBILITE COMMUNICATION</option>
+<option value="458">FC-ADMIN-FONDAMENTAUX BUDGET DE L&#039;ETAT</option>
+<option value="846">FC-ADMIN-MENTOR-ECRIRE POUR LE WEB</option>
+<option value="849">FC-ADMIN-MENTOR_ACCESSIBILITE COMMUNICATION ETAT</option>
+<option value="163">FC-ADMIN_BOURSES COLLEGE</option>
+<option value="162">FC-ADMIN_BOURSES LYCEE</option>
+<option value="160">FC-APC-ADMIN_ECHANGE PRATIQUE SECRETAIRES CMS</option>
+<option value="142">FC-APC-ADMIN_ECHANGE PRATIQUE SECRETAIRES EPLE</option>
+<option value="384">FC-EGAL-PROMOUVOIR EGALITE &amp; DIVERSITE AU TRAVAIL</option>
+<option value="319">FC-EGAL_COMPRENDRE POUR AGIR EGALITE H/F</option>
+<option value="139">FC-ENC- CPS : POSTURE PROFESSIONNELLE</option>
+<option value="128">FC-TECH PARCOURS METIER PERSONNELS DE LABO EN EPLE</option>
+<option value="129">FC-TECH PARCOURS SST PERSONNELS LABO EN EPLE</option>
+<option value="794">FDF ACAD- CLASSE LABO</option>
+<option value="792">FDF ACAD- COLLECTIF PROFESSIONNEL APPRENANT</option>
+<option value="787">FDF ACAD- OBSERVATION DE FORMATEURS</option>
+<option value="798">FDF ACAD- SEMINAIRE DES FORMATEURS 2D</option>
+<option value="789">FDF ACAD- WEBINAIRES EXPERTISE THEMATIQUE</option>
+<option value="797">FDF ACAD- WEBINAIRES EXPERTISE THEMATIQUE</option>
+<option value="788">FDF ACAD-ANIMER DES FORMATIONS</option>
+<option value="783">FDF ACAD-COMMUNIQUER EN TANT QUE FORMATEUR</option>
+<option value="782">FDF ACAD-ETHIQUE ET DEONTOLOGIE DU FORMATEUR</option>
+<option value="796">FDF ACAD-IMPULSER UN CHANGEMENT DE PARADIGME </option>
+<option value="791">FDF ACAD-IMPULSER UN CHANGEMENT DE PARADIGME</option>
+<option value="786">FDF ACAD-LAB REGLEMENTATION</option>
+<option value="781">FDF ACAD-PENSER CONCEVOIR UNE FORMATION</option>
+<option value="621">FDF- EDD - ENSEIGNER LES CHANGEMENTS CLIMATIQUES</option>
+<option value="457">FDF-ADMIN-CONCEVOIR ET ANIMER UNE CLASSE VIRTUELLE</option>
+<option value="580">FDF-ENSN-CONCEVOIR ET/OU TRANSFORMER AVEC L&#039;IA</option>
+<option value="581">FDF-ENSN-CULTURE NUMÉRIQUE COMMUNE DE LA FORMATION</option>
+<option value="582">FDF-ENSN-DECOUVRIR L&#039;IA POUR LES FORMATEURS</option>
+<option value="583">FDF-ENSN-INTERACTIONS ET COMMUNS NUMERIQUES </option>
+<option value="585">FDF-ENSN-PENSER ET CONCEVOIR UNE FORMATION HYBRIDE</option>
+<option value="534">FDF-HDA -FORMATION DE FORMATEURS EN HDA</option>
+<option value="208">FDT- INITIATION A ENTRETIEN D EXPLICITATION</option>
+<option value="207">FDT-PARCOURS DE FORMATION DES TUTEURS</option>
+<option value="507">FI-PEES TP PARCOURS MODULAIRE PERIODE 1</option>
+<option value="508">FI-PEES TP PARCOURS MODULAIRE PERIODE 2</option>
+<option value="827">FI-PEES TP PARCOURS NON TITULAIRES MEEF</option>
+<option value="831">FI-PEES TP PARCOURS RENOUVELES DETACHES</option>
+<option value="69">FIL - M1 : COMPETENCES DE BASE EN PREVENTION</option>
+<option value="132">FIL - SST-HABILITATION A LA CONDUITE D AUTOCLAVE</option>
+<option value="989">FORMATION INITIATEUR AUX GESTES QUI SAUVENT-IGQS</option>
+<option value="638">FTRE - PARCOURS TRANSITION ÉCOLOGIQUE </option>
+<option value="875">HABILITATION EXAMINATEUR-CORRECTEUR DELF</option>
+<option value="121">HG - DEVELOPPER LES COMPETENCES LANGAGIERES EN HG</option>
+<option value="119">HG - ENSEIGNER AVEC LES NOTIONS EN HG ET EN HGGSP</option>
+<option value="120">HG - LE DOCUMENT EN HG ET HGGSP</option>
+<option value="115">HG - PRATIQUES NUMERIQUES ET IA EN HG ET HGGSP</option>
+<option value="487">HLP - ENSEIGNER SPÉCIALITÉ HUMANITÉS LITT PHILO</option>
+<option value="293">I2SC- IA DES CONCEPTS CLES AUX USAGES EN EDUCATION</option>
+<option value="291">I2SC- JOURNEE IA RESEAU CANOPE</option>
+<option value="294">I2SC-IA STRATEGIES PEDAGO &amp; ACCOMP ELEVES</option>
+<option value="1039">INTERLANGUE-ANGL- ACCOMPAGNEMENT CERTIF DNL</option>
+<option value="1040">INTERLANGUE-ANGL- DNL-RENFORCEMENT LINGUISTIQUE</option>
+<option value="489">LCA- ENSEIGNER LES LCA AU COLLEGE ET AU LYCEE</option>
+<option value="675">LCD- PARCOURS REFERENTS EGALITE FILLES-GARCONS</option>
+<option value="676">LCD-QUAND LE GENRE ORIENTE: AGIR POUR L EGALITE</option>
+<option value="771">LET ENSEIGNEMENT ARTISTIQUE THEATRE</option>
+<option value="549">LET ENSEIGNER EN CAV</option>
+<option value="74">LET ENSEIGNER LE NOUVEAU THEME DE CGE EN BTS</option>
+<option value="614">LET FAIRE LIRE UN RECUEIL POETIQUE AU COLLEGE </option>
+<option value="653">LET LES NOUVELLES OEUVRES AU PROGRAMME DE PREMIERE</option>
+<option value="556">LET PROLONGER L&#039;ETUDE DES OEUVRES THEATRALES 1ERE</option>
+<option value="434">LET-ANG VP IA ET COURS DE LANGUE</option>
+<option value="435">LET-ANG VP PARCOURS DIFFERENCIE</option>
+<option value="436">LET-ANG VP PRISE EN COMPTE ELEVES BESOINS PARTIC</option>
+<option value="689">LETHG VP PRATIQUES EVALUATIVES </option>
+<option value="690">LETHG VP RENDRE LES ELEVES ACTEURS ET ACTIFS</option>
+<option value="671">LV ALL-IA EN COURS D&#039;ALLEMAND ( NIVEAU1)</option>
+<option value="971">LV ANG - COLLECTIF APPRENANT LLCER</option>
+<option value="697">LV ANG - ELEVES A BESOINS PARTICULIERS -I</option>
+<option value="696">LV ANG - ELEVES A BESOINS PARTICULIERS -II</option>
+<option value="973">LV ANG - EXAMINATEURS CERTIFICATION CAMBRIDGE</option>
+<option value="974">LV ANG - INFORMATION DESINFORMATION </option>
+<option value="694">LV ANG - USAGES PEDAGOGIQUES DU NUMERIQUE</option>
+<option value="982">LV ESP - CLASSE OUVERTE ET ANALYSE DE PRATIQUES</option>
+<option value="992">LV ESP - ENSEIGNEMENT EXPLICITE ET ACCESSIBLE</option>
+<option value="991">LV ESP - IA ENSEIGNEMENT ET APPRENTISSAGES</option>
+<option value="986">LV ESP - LCE SECTION EUROPEENNE ET DELE</option>
+<option value="980">LV ESP - PRATIQUES THEATRALES ACTVT LANGAGIERES</option>
+<option value="1004">LV ESP- ETUDES LITTERAIRES ET CIVILISATIONNELLES</option>
+<option value="1003">LV ESP- LES COMPETENCES ORALES DES ELEVES</option>
+<option value="1007">LV IT - COLLECTIF DE TRAVAIL</option>
+<option value="482">MATH-APPORTS DE LA RECHERCHE POUR ENSEIG FRACTIONS</option>
+<option value="475">MATH-CLASSES OUVERTES MATHEMATIQUES</option>
+<option value="481">MATH-EVALUATIONS NATIONALES EN MATHS AU COLLEGE</option>
+<option value="483">MATH-MATHEMATIQUES BRIDGE ET RAISONNEMENT</option>
+<option value="477">MATH-MATHS JOURNEE DE L APMEP</option>
+<option value="628">MÉMOIRE - CNRD : LA FIN DE LA SHOAH ET DU NAZISME</option>
+<option value="407">MENTOR- ENC_MANAGER LE TELETRAVAIL</option>
+<option value="518">MENTOR-ADMIN-AGIR POUR SON PROJET DE MOBILITE PRO</option>
+<option value="461">MENTOR-ADMIN-FONDAMENTAUX DES GAZ A EFFET DE SERRE</option>
+<option value="459">MENTOR-ADMIN-IMPACT ENVIRONNEMENTAL DU NUMÉRIQUE</option>
+<option value="232">MENTOR-ADMIN-LES ECRITS PROFESSIONNELS</option>
+<option value="656">MENTOR-ADMIN-SERIOUS GAME IMPACT ENV DU NUMÉRIQUE</option>
+<option value="460">MENTOR-ADMIN_ SECURITE INFO&amp;ECO-RESPONSABILITE</option>
+<option value="466">MENTOR-ADMIN_ADOPTER BONS REFLEXES DEONTOLOGIE</option>
+<option value="654">MENTOR-ADMIN_DECOUVRIR LES IA GENERATIVES</option>
+<option value="659">MENTOR-ADMIN_LES FONDAMENTAUX DU BUDGET DE L&#039;ETAT</option>
+<option value="858">MENTOR-ATSS-A LA DECOUVERTE DE SERVICES PUBLICS+</option>
+<option value="317">MENTOR-EGAL_VERS EGALITE ENTRE HOMMES ET FEMMES</option>
+<option value="382">MENTOR-EGAL_VIOLENCES SEXISTES&amp;SEXUELLES TRAVAIL</option>
+<option value="661">MENTOR-ENC-MENER UN ENTRETIEN EVALUATION PROF</option>
+<option value="470">MENTOR-TRAVAILLER AUTREM : ASTUCES, BIAIS À ÉVITER</option>
+<option value="468">MENTOR-TT COMPRENDRE DIALOG SOCIAL/DROIT SYNDICAL</option>
+<option value="766">MIEUX VIVRE SON QUOTIDIEN PROF.GERER SON STRESS</option>
+<option value="512">MPLS-BIODIVERSITE DU LITTORAL</option>
+<option value="999">MPLS-CARBONE BLEU</option>
+<option value="520">MPLS-ENERGIE DU CONCEPT AUX ENJEUX</option>
+<option value="1002">MPLS-ENSEIGNER LA PROGRAMMATION</option>
+<option value="1000">MPLS-INTELLIGENCE ARTIFICIELLE</option>
+<option value="998">MPLS-LA CHIMIE DERRIERE LES COSMETIQUES</option>
+<option value="1001">MPLS-LES MATERIAUX</option>
+<option value="61">PARCOURSUP : ACCOMPAGNER LES ELEVES DE TERMINALE</option>
+<option value="41">PARCOURSUP : MON PROJET SUP ONISEP</option>
+<option value="63">PARCOURSUP : OUTIL DE GESTION POSTBAC</option>
+<option value="657">PC-ADMIN-LE DOSSIER RAEP</option>
+<option value="110">PC-ADMIN-PREPA  CONCOURS INTERNE ADJAENES</option>
+<option value="105">PC-ADMIN-PREPA CONCOURS INTERNE AAE</option>
+<option value="102">PC-ADMIN-PREPA CONCOURS SAENES CLASSE NORMALE</option>
+<option value="106">PC-ADMIN-PREPA EXAMEN PRO AVANC GRADE APAE</option>
+<option value="104">PC-ADMIN-PREPA EXAMEN PRO AVANC SAENES CL EXCEPT</option>
+<option value="103">PC-ADMIN-PREPA EXAMEN PRO AVANC SAENES CLASSE SUP</option>
+<option value="107">PC-ADMIN-PREPA SANS CONCOURS ADJOINT ADMINISTRATIF</option>
+<option value="108">PC-ADMIN-PREPARATION LISTE APTITUDE  B VERS A</option>
+<option value="109">PC-ADMIN-PREPARATION LISTE APTITUDE  C VERS B</option>
+<option value="76">PC-ENC-PREPARATION CONCOURS CHEF D&#039;ETABLISSEMENT</option>
+<option value="75">PC-ENC-PREPARATION CONCOURS INSPECTEUR</option>
+<option value="125">PC-ENS : PREPARATION AGREG INT ARTS PLASTIQUES</option>
+<option value="259">PC-ENS : PREPARATION AGREG INT EDUCATION MUSICALE</option>
+<option value="124">PC-ENS : PREPARATION AGREGATION INT  ECO-GESTION</option>
+<option value="747">PC-ENS : PREPARATION AGREGATION INTERNE ALLEMAND</option>
+<option value="19">PC-ENS : PREPARATION AGREGATION INTERNE ANGLAIS</option>
+<option value="27">PC-ENS : PREPARATION AGREGATION INTERNE DE SES</option>
+<option value="20">PC-ENS : PREPARATION AGREGATION INTERNE EPS</option>
+<option value="26">PC-ENS : PREPARATION AGREGATION INTERNE ESPAGNOL</option>
+<option value="21">PC-ENS : PREPARATION AGREGATION INTERNE HIST-GEO</option>
+<option value="23">PC-ENS : PREPARATION AGREGATION INTERNE LETTRES</option>
+<option value="22">PC-ENS : PREPARATION AGREGATION INTERNE MATH</option>
+<option value="25">PC-ENS : PREPARATION AGREGATION INTERNE PHILO</option>
+<option value="28">PC-ENS : PREPARATION AGREGATION INTERNE PHYS-CHIM</option>
+<option value="24">PC-ENS : PREPARATION AGREGATION INTERNE SVT</option>
+<option value="1055">PC-ENS-PREPARATION CAPES INT MUSIQUE&amp;CHANT CHORAL</option>
+<option value="126">PC-ENS_PREPARATION CAPEPS INTERNE</option>
+<option value="127">PC-ENS_PREPARATION CAPES INTERNE DE DOCUMENTATION</option>
+<option value="45">PC-ENS_PREPARATION CAPES, CAPET, CAPLP2 INTERNE</option>
+<option value="235">PC-INF-PREPA CONCOURS INFIRMIER EDUC NAT</option>
+<option value="111">PC-PREPARATION DES CONTRACTUELS AU CONCOURS PSY&#039;EN</option>
+<option value="112">PC-TECHN-PREPARATION CONCOURS INTERNE ITRF</option>
+<option value="147">PCH SVT MATH-DEVELOPPER ESPRIT CRITIQUE CHEZ ELEVE</option>
+<option value="354">PCH-ELABORATION RESSOURCES MANIPULER EXPERIMENTER</option>
+<option value="324">PCH-ENSEIGNER AUTREMENT AVEC LE NUMERIQUE</option>
+<option value="995">PCH-LA CHIMIE VERTE ET SON ENSEIGNEMENT</option>
+<option value="491">PCH-LANGAGES ET SCIENCES DIRE LIRE ECRIRE</option>
+<option value="996">PCH-LOIS ET PRINCIPES DE PHYS : APPROCHE DIDACT</option>
+<option value="496">PHIL APPROFONDIR LA PENSEE DE PUTNAM</option>
+<option value="572">PHIL ENSEIGNER LA PHILOSOPHIE AUTREMENT</option>
+<option value="594">PHIL USAGES ET MESUSAGES DE L IA </option>
+<option value="118">PROF DOC- PARCOURS PROFESSEURS DOCUMENTALISTES</option>
+<option value="551">PROF-DOC REGROUPEMENTS DEPARTEMENTAUX CHARENTE</option>
+<option value="552">PROF-DOC REGROUPEMENTS DEPARTEMENTAUX CHARENTE-MAR</option>
+<option value="555">PROF-DOC REGROUPEMENTS DEPARTEMENTAUX DEUX SEVRES</option>
+<option value="554">PROF-DOC REGROUPEMENTS DEPARTEMENTAUX VIENNE</option>
+<option value="987">PSC-FORMATION CONTINUE DES FORMATEURS PSC</option>
+<option value="54">PSY EDO EDA DISPOSITIF SOUTIEN AU SOUTIEN</option>
+<option value="55">PSYCHOLOGIE : LES TROUBLES DU NEURO-DEVELOPPEMENT</option>
+<option value="53">PSYCHOLOGIE : PRATIQUE DU BILAN </option>
+<option value="96">QVCT-MGEN PAS-EN ATTENTE</option>
+<option value="95">QVCT-MGEN PAS-EN ATTENTE</option>
+<option value="969">QVCT-MGEN PAS-EN ATTENTE (copie)</option>
+<option value="18">QVCT-PROTEGER ET DECOUVRIR LE CORPS ET LA VOIX </option>
+<option value="440">REI ACCUEILLIR UN CORPS EUROPEEN DE SOLIDARITE</option>
+<option value="443">REI-EXPLOITER UN PROJET D OUVERTURE INTERNATIONALE</option>
+<option value="448">REI-GERER PROJETS EUROPEENS EN ETABLISSEMENT</option>
+<option value="983">SANTE MENTALE-ADULTE REFERENT</option>
+<option value="577">SCICONUM : NUMÉRIQUE ET SCIENCES COGNITIVES</option>
+<option value="573">SCICONUM-ÉVALUER :NUMÉRIQUE ET SCIENCES COGNITIVES</option>
+<option value="575">SCICONUM-GERER HETEROGENITE NUM &amp; SCIENCES COG</option>
+<option value="571">SCICONUM-SEANCES ENGAGEANTES NUM &amp; SCIENCES COG</option>
+<option value="666">SES - ACTUALISATION DES CONNAISSANCES</option>
+<option value="618">SES - LE JEU DE ROLE AU SERVICE DES APPRENTISSAGES</option>
+<option value="679">SVT-COMMENT MOTIVER LES ELEVES ?</option>
+<option value="682">SVT-LIRE ET ECRIRE POUR MIEUX APPRENDRE EN SVT</option>
+<option value="629">TRI-AC - PARCOURS TRINOME ACADÉMIQUE</option>
+<option value="631">TRI-AC - Question de défense et de paix </option>
+<option value="877">VP LET HG FORUM DE LECTURE</option>
+<option value="878">VP LET HG- LIRE, DIRE, ECRIRE en LET HG</option>
+<option value="1033">VP LET-ESP_ TRANS ENSEIGNER L&#039;ESP EN VP</option>
+<option value="890">VP SBSSA ECHANGES DE PRATIQUES EN BIOTECHNOLOGIE</option>
+<option value="891">VP- SBSSA ACC. PRISE EN CHARGE DE LA FIN DE VIE</option>
+</select>            </div>
+
+    <div class="row" id="div-lib">
+        <label for="Gmodu_lib" class="required">Libellé <span class="required">*</span></label>        <input size="60" maxlength="255" name="Gmodu[lib]" id="Gmodu_lib" type="text" value="ENSN - ENSN -  WEBINAIRES USAGES PEDAGO ENT 1 " />            </div>
+    
+        <div class="row" id="div-cumul">
+        <label for="Gmodu_cumul">Formation réglementaire</label>        <input id="ytGmodu_cumul" type="hidden" value="0" name="Gmodu[cumul]" /><input name="Gmodu[cumul]" id="Gmodu_cumul" value="1" type="checkbox" />            </div>
+        
+    <div class="row" id="div-obj_peda">
+        <label for="Gmodu_obj_peda" class="required">Objectifs pédagogiques <span class="required">*</span></label>        <input size="60" maxlength="255" name="Gmodu[obj_peda]" id="Gmodu_obj_peda" type="text" value="Favoriser l’appropriation des usages pédagogiques de l&#039;ENT Lycée Connecté en mettant en lumière des pratiques concrètes et innovantes, afin d’accompagner les enseignants dans l’intégration efficace de ces outils au service des gestes pédagogiques" />            </div>
+    
+    <div class="row" id="div-contenu">
+        <label for="Gmodu_contenu" class="required">Contenu <span class="required">*</span></label>        <textarea rows="6" cols="50" name="Gmodu[contenu]" id="Gmodu_contenu">En partant des gestes pédagogiques, ce cycle de webinaires vise à partager des retours d’expérience, des cas d’usage et des ressources pratiques pour favoriser les apprentissages.</textarea>            </div>
+
+    <div class="row" id="div-co_cont">
+        <label for="Gmodu_co_cont" class="required">Code contenu <span class="required">*</span></label>        <select name="Gmodu[co_cont]" id="Gmodu_co_cont" ><option value="">Faire un choix...</option><option value="A01">ARTS PLASTIQUES</option><option value="A02">MUSIQUE ET EDUCATION MUSICALE</option><option value="A03">ARTS APPLIQUES</option><option value="A04">CINEMA, DANSE, THEATRE</option><option value="A05">PATRIMOINE ET RICHESSES CULTURELLES</option><option value="A99">AUTRE CONTENU ARTS ET PATRIMOINE</option><optgroup label="MAITRISE DE LA LANGUE, COMMUNICATION ECRITE/ORALE"><option value="B01">LECTURE</option><option value="B02">MAITRISE DE LA LANGUE</option><option value="B03">ACTIVITES DE COMMUNICATION ORALE</option><option value="B04">ACTIVITES DE COMMUNICATION ECRITE</option><option value="B05">EDUCATION AUX M?DIAS</option><option value="B99">AUTRE CONTENU MAITRISE LANGUE, ECRIT/ORAL</option></optgroup><optgroup label="EDUCATION, FORMATION, ORGANISATION, ACCOMPAGNEMENT"><option value="C01">AIDE AUX APPRENTISSAGES (Y COMPRIS AIDE A L'ELEVE)</option><option value="C02">AIDE SPECIFIQUE A.S.H.</option><option value="C03">AIDE SPECIFIQUE GRANDE DIFFICULTE SCOLAIRE</option><option value="C40">ENVIRONNEMENT GEOGRAPHIQUE, ECONOMIQUE, SOCIAL ET</option><option value="C51">ORGANISATION ET SUIVI DES STRUCTURES SCOLAIRES</option><option value="C52">CONNAISSANCE DES SYSTEMES EDUCATIFS</option><option value="C60">DIDACTIQUE ET PEDAGOGIE</option><option value="C61">INGENIERIE EDUCATIVE ET DE FORMATION</option><option value="C70">ORIENTATION</option><option value="C80">TECHNIQUES DOCUMENTAIRES ET DOCUMENTATION</option><option value="C90">ACCOMPAGNEMENT RH</option><option value="C99">AUTRE CONTENU EDUC, FORMATION, ORGA, ACCOMP</option></optgroup><optgroup label="EDUCATION PHYSIQUE ET SPORTIVE"><option value="D01">EDUCATION PHYSIQUE ET SPORTIVE</option></optgroup><optgroup label="SCIENCES ET METIERS DE LA GESTION"><option value="E01">GESTION MATERIELLE ET PATRIMONIALE</option><option value="E02">GESTION FINANCIERE ET COMPTABLE</option><option value="E04">ECONOMIE ET GESTION</option><option value="E05">ADMINISTRATION ET SECRETARIAT</option><option value="E06">GESTION DU PERSONNEL</option><option value="E07">GESTION DES MOYENS</option><option value="E99">AUTRE CONTENU SCIENCES ET METIERS DE LA GESTION</option></optgroup><optgroup label="LETTRES ET LANGUES"><option value="F01">LETTRES</option><option value="F10">LANGUES ANCIENNES</option><option value="F21">ALLEMAND</option><option value="F22">ANGLAIS</option><option value="F23">ESPAGNOL</option><option value="F24">ITALIEN</option><option value="F48">INTERLANGUES</option><option value="F49">AUTRES LANGUES ETRANGERES</option><option value="F50">LANGUES REGIONALES</option><option value="F99">AUTRE CONTENU LETTRES ET LANGUES</option></optgroup><optgroup label="PILOTAGE ET ORGANISATION"><option value="G01">METHODOLOGIE DE PROJET</option><option value="G03">PILOTAGE DES ACTIVITES ET DES MOYENS</option><option value="G05">CONSEIL, CARRIERE ET MOBILITE, GESTION COMPETENCES</option><option value="G06">MANAGEMENT ET COMMUNICATION</option><option value="G07">VALUATION DES POLITIQUES, STRUCTURES, DISPOS EDUC</option><option value="G99">AUTRE CONTENU PILOTAGE ET ORGANISATION</option></optgroup><optgroup label="SANTE, SOCIAL, PREVENTION, HYGIENE ET SECURITE"><option value="J01">SANTE</option><option value="J02">SOCIAL</option><option value="J03">PREVENTION DES CONDUITES A RISQUE</option><option value="J04">PREVENTION DE LA VIOLENCE</option><option value="J05">PREVENTION DES RISQUES PROFESSIONNELS</option><option value="J06">HYGIENE ET SECURITE</option><option value="J07">SCIENCES MEDICO-SOCIALES</option><option value="J99">AUTRE CONTENU SANTE, SOCIAL, PREVENTION, HYGIENE E</option></optgroup><optgroup label="SCIENCES, TECHNOLOGIE ET SCIENCES DE L'INGENIEUR"><option value="K01">MATHEMATIQUES</option><option value="K02">PHYSIQUE-CHIMIE</option><option value="K03">SCIENCES DE LA VIE ET DE LA TERRE</option><option value="K04">TECHNOLOGIE</option><option value="K05">BIOTECHNOLOGIES ET SBSSA</option><option value="K06">ARCHITECTURE ET CONSTRUCTION</option><option value="K07">ENERGIE ET ENVIRONNEMENT</option><option value="K08">INNOVATION TECHNOLOGIQUE</option><option value="K09">TRANSFORMATIONS (CHIMIE, AGROALIM, VERRE, ETC.)</option><option value="K10">MECANIQUE ET STRUCTURES METALLIQUES</option><option value="K11">MOTEURS, M?CANIQUE AUTO ET AERONAUTIQUE</option><option value="K12">ELECTRICITE, ELECTRONIQUE</option><option value="K13">INFORMATIQUE-AUTOMATISME-MAINTENANCE INDUSTRIELLES</option><option value="K14">BATIMENT, TRAVAUX PUBLICS, BOIS</option><option value="K15">ENERGETIQUE, CLIMATISATION, CHAUFFAGE</option><option value="K16">MATERIAUX SOUPLES, TEXTILE, HABILLEMENT</option><option value="K17">TECHNIQUES DE LABORATOIRE</option><option value="K18">SCIENCES DE L'INGENIEUR</option><option value="K19">NUMERIQUE ET SCIENCES INFORMATIQUES</option><option value="K99">AUTRE CONTENU SCIENCES, TECHNO, SCIENCES INGENIEUR</option></optgroup><optgroup label="SCIENCES HUMAINES, SCIENCES SOCIALES ET DROIT"><option value="L01">HISTOIRE, GEOGRAPHIE</option><option value="L05">PHILOSOPHIE</option><option value="L10">EDUCATION CIVIQUE ET EDUCATION A LA CITOYENNETE</option><option value="L11">SOCIOLOGIE</option><option value="L12">PSYCHOLOGIE ET SCIENCES DE L'EDUCATION</option><option value="L51">DROIT</option><option value="L53">CULTURE JURIDIQUE</option><option value="L60">SCIENCES ECONOMIQUES ET SOCIALES</option><option value="L99">AUTRE CONTENU SCIENCES HUMAINES, SOCIALES ET DROIT</option></optgroup><optgroup label="SERVICES"><option value="M01">COMMERCE ET VENTE</option><option value="M02">LOGISTIQUE ET TRANSPORTS</option><option value="M03">HOTELLERIE, RESTAURATION, TOURISME</option><option value="M05">IMPRIMERIE, EDITION</option><option value="M10">ACCUEIL</option><option value="M20">ENTRETIEN DES LOCAUX, DES ESPACES VERTS, MAINTENAN</option><option value="M99">AUTRE CONTENU SERVICES</option></optgroup><optgroup label="USAGES DU NUMERIQUE ET DES SYSTEMES D'INFORMATION"><option value="N01">OUTILS NUMERIQUES DE TRAVAIL</option><option value="N02">METHODES, TECHNIQUES ET LANGAGES INFORMATIQUES</option><option value="N03">INFORMATIQUE DE GESTION</option><option selected="selected" value="N05">USAGES PEDAGOGIQUES DU NUMERIQUE</option><option value="N06">INFRASTRUCTURES,RESEAUX ET TELECOMS</option><option value="N99">AUTRE CONTENU NUMERIQUE ET SYSTEMES D?INFORMATION</option></optgroup><optgroup label="AUTRES CONTENUS"><option value="P98">CONTENUS TOUCHANT A PLUSIEURS GROUPES, INTER-TRANS</option><option value="P99">CONTENU NE TOUCHANT A AUCUN DOMAINE PRECEDENT</option></optgroup></select>                    </div>
+
+    <div class="row" id="div-co_cibl">
+        <label for="Gmodu_co_cibl" class="required">Public cible <span class="required">*</span></label>        <select name="Gmodu[co_cibl]" id="Gmodu_co_cibl">
+<option value="">Faire un choix</option>
+<option value="C2">ASSISTANT D&#039;EDUCATION</option>
+<option value="T2">ASSISTANT ET CONSEILLER DE PREVENTION</option>
+<option value="A7">ASSISTANT ETRANGER</option>
+<option value="G1">CHEF DE DIVISION OU RESPONSABLE DE SERVICE</option>
+<option value="B3">CONSEILLER PEDAGOGIQUE</option>
+<option value="N2">CORRESPONDANT RRH (RELATIONS RESSOURCES HUMAINES)</option>
+<option value="G4">DIRECTEUR DELEGUE AUX FORMATIONS PRO ET TECH</option>
+<option value="N1">DRH (DIRECTEUR DES RESSOURCES HUMAINES)</option>
+<option value="A2">ENSEIGNANT EN COLLEGE</option>
+<option value="A4">ENSEIGNANT EN LYCEE</option>
+<option value="A5">ENSEIGNANT EN LYCEE PROFESSIONNEL</option>
+<option value="C0">FONCTION D&#039;EDUCATION</option>
+<option value="A0" selected="selected">FONCTION D&#039;ENSEIGNEMENT</option>
+<option value="K0">FONCTION D&#039;INSPECTION</option>
+<option value="J0">FONCTION DE DIRECTION ECOLE, EPLE, ETAB SPECIALISE</option>
+<option value="N0">FONCTION DE GESTION DES RESSOURCES HUMAINES</option>
+<option value="E0">FONCTION DOCUMENTATION, BIBLIOTHEQUES, ARCHIVES</option>
+<option value="T0">FONCTION HYGIENE ET SECURITE</option>
+<option value="M0">FONCTION MEDICO-SOCIALE</option>
+<option value="B1">FORMATEUR</option>
+<option value="Y3">INTER-CATEGORIEL PERSONNELS ATSS</option>
+<option value="U3">LABORATOIRE</option>
+<option value="D3">PERSONNEL D&#039;ORIENTATION</option>
+<option value="D1">PERSONNEL DE L&#039;ASH</option>
+<option value="M2">PERSONNEL INFIRMIER</option>
+<option value="D2">PSYCHOLOGUE SCOLAIRE</option>
+<option value="Y0">PUBLIC INTER CATEGORIEL</option>
+<option value="P2">SECRETARIAT DES SERVICES EN DSDEN OU EN RECTORAT</option>
+<option value="B7">TUTEUR</option>
+</select>            </div>
+
+    <div class="row" id="div-co_prna">
+        <label for="Gmodu_co_prna" class="required">Priorité nationale <span class="required">*</span></label>        <select name="Gmodu[co_prna]" id="Gmodu_co_prna">
+<option value="">Faire un choix</option>
+<option value="00">00-Aucune des priorités nationales actuelles</option>
+<option value="5A01">5A01-VDR LUTTE CONTRE TOUTE FORME DE DISCRIMINATION</option>
+<option value="5A02">5A02-PROMOTION DE LA CITOYENNETE</option>
+<option value="5A03">5A03-POLITIQUES EDUCATIVES DROITS ET OBLIGATIONS</option>
+<option value="5B01">5B01-DIDACTIQUE ET PEDAGOGIE FRANCAIS ET MATHEMATIQUES</option>
+<option value="5B02">5B02-APPRENTISSAGES A L&#039;ECOLE MATERNELLE</option>
+<option value="5B03">5B03-DISCIPLINES D&#039;ENSEIGNEMENT</option>
+<option value="5B04">5B04-PARCOURS D&#039;ORIENTATION ET DECOUVERTE DES METIERS</option>
+<option value="5B05">5B05-PARCOURS EDUCATIFS EAC CITOYEN SANTE</option>
+<option value="5B06">5B06-CONDUITE DE CLASSE</option>
+<option value="5B07">5B07-COMPLEMENTARITE DES TEMPS EDUCATIFS</option>
+<option value="5C01">5C01-MANAGEMENT CONDUITE DU CHANGEMENT DIALOGUE SOCIAL</option>
+<option value="5C02">5C02-PILOTAGE PEDAGOGIQUE</option>
+<option value="5D01">5D01-PARCOURS DIFFERENCIES PAR METIER</option>
+<option value="5D02">5D02-PARCOURS AGENTS CHARGES DU BUDGET ET DES FINANCES</option>
+<option value="5D03">5D03-PARCOURS DES ACTEURS DE LA COMMUNAUTE RH</option>
+<option value="5D04">5D04-FORMATION DES ACTEURS ACCOMPAGNEMENT PERSONNALISE</option>
+<option value="5D05">5D05-FORMATION DES ACTEURS DE LA FORMATION</option>
+<option value="5E01">5E01-PRATIQUES PEDAGOGIQUES INCLUSIVES</option>
+<option value="5E02">5E02-INCLUSION ET COOPERATION EDUCATIVE</option>
+<option value="5E03">5E03-INCLUSION DES AGENTS DANS LE CADRE PROFESSIONNEL</option>
+<option value="5F01">5F01-PROMOTION DE LA SANTE ET EVARS</option>
+<option value="5F02">5F02-PREVENTION ET LUTTE CONTRE TOUTES LES VIOLENCES</option>
+<option value="5F03">5F03-GESTION DE CRISE PSC ET SANTE MENTALE</option>
+<option value="5F04">5F04-QUALITE DE VIE SANTE SECURITE AU TRAVAIL</option>
+<option value="5G01">5G01-ENJEUX ET LEVIERS DE LA TRANSITION ECOLOGIQUE</option>
+<option value="5G02">5G02-ACCOMPAGNEMENT DES PROJETS ECO-RESPONSABLES</option>
+<option value="5G03">5G03-USAGE RAISONNE DE L&#039;INTELLIGENCE ARTIFICIELLE</option>
+<option value="5G04" selected="selected">5G04-COMPETENCES NUMERIQUES DES PERSONNELS</option>
+<option value="5G05">5G05-CYBERSECURITE ET PROTECTION DES DONNEES</option>
+<option value="5H01">5H01-PROFESSIONNALISATION JEPVA</option>
+<option value="5H02">5H02-PROFESSIONNALISATION JS</option>
+</select>            </div>
+
+    <div class="row" id="div-co_thema">
+        <label for="Gmodu_co_thema" class="required">Thématique nationale <span class="required">*</span></label>        <select name="Gmodu[co_thema]" id="Gmodu_co_thema"><option value="00">00-Aucune thématique actuelle</option><option value="1A01">1A01-LAICITE</option><option value="1A02">1A02-LIBERTES ET DROITS FONDAMENTAUX</option><option value="1A03">1A03-EGALITE DES DROITS</option><option value="1A04">1A04-EDUCATION A LA DEFENSE</option><option value="1B01">1B01-ETHIQUE ET DEONTOLOGIE DANS LA FONCTION PUBLIQUE</option><option value="1B02">1B02-CONNAISSANCE DU SYSTEME EDUCATIF</option><option value="1B03">1B03-CULTURE JURIDIQUE ET FONDAMENTAUX DU DROIT</option><option value="1B04">1B04-EGALITE PROFESSIONNELLE FEMME HOMME</option><option value="1C01">1C01-EFFETS DE LA PAUVRETE ET DE LA PRECARITE</option><option value="1C02">1C02-DETERMINISMES SOCIAUX ET TERRITORIAUX</option><option value="1C03">1C03-EDUCATION PRIORITAIRE</option><option value="1C04">1C04-RURALITE</option><option value="1C05">1C05-RELATION ECOLE FAMILLES</option><option value="1C06">1C06-ECOLE INCLUSIVE</option><option value="1C07">1C07-LUTTE CONTRE L'ILLETTRISME, L'INNUMERISME</option><option value="1D01">1D01-LUTTE CONTRE LE RACISME ET L'ANTISEMITISME</option><option value="1D02">1D02-LUTTE CONTRE LES DISCRIMINATIONS LIEES AU HANDICAP</option><option value="1D03">1D03-LUTTE CONTRE LES STEREOTYPES</option><option value="1D04">1D04-EGALITE ENTRE LES FILLES ET LES GARCONS</option><option value="1D05">1D05-LUTTE CONTRE LES LGBT+ PHOBIES</option><option value="1D06">1D06-LUTTE CONTRE LES INEGALITES ET LES DISCRIMINATIONS</option><option value="1E01">1E01-CLIMAT SCOLAIRE</option><option value="1E02">1E02-ENGAGEMENT, CITOYENNETE, DEMOCRATIE SCOLAIRE</option><option value="1E03">1E03-LUTTE CONTRE LE HARCELEMENT ET LE CYBERHARCELEMENT</option><option value="1E04">1E04-PREVENTION DES VIOLENCES PSYCHIQUES ET PHYSIQUES</option><option value="1E05">1E05-LUTTE CONTRE LES VIOLENCES DANS LE SPORT</option><option value="1E06">1E06-PREVENTION DE LA RADICALISATION</option><option value="1E07">1E07-CONTROLE DES DIPLOMES DU SPORT ET DE L'ANIMATION</option><option value="1E08">1E08-SECURITE DES BIENS ET DES PERSONNES</option><option value="1F01">1F01-PARCOURS EDUCATIF DE SANTE</option><option value="1F02">1F02-COMPETENCES PSYCHO-SOCIALES</option><option value="1F03">1F03-SECOURISME</option><option value="1F04">1F04-ECOLE PROMOTRICE DE SANTE</option><option value="1F05">1F05-EDUCATION A L'ALIMENTATION</option><option value="1F06">1F06-EDUCATION A LA SEXUALITE</option><option value="1F07">1F07-SOBRIETE NUMERIQUE</option><option value="1F08">1F08-LUTTE CONTRE LE DOPAGE</option><option value="1F09">1F09-SUIVI MEDICAL DES SPORTIFS</option><option value="1F10">1F10-SECURISATION DES STRUCTURES SPORTIVES</option><option value="2A01">2A01-SAVOIRS FONDAMENTAUX - PLAN FRANCAIS</option><option value="2A02">2A02-SAVOIRS FONDAMENTAUX - PLAN MATHEMATIQUES</option><option value="2A03">2A03-SAVOIRS FONDAMENTAUX - PLAN LANGUES VIVANTES</option><option value="2A04">2A04-SAVOIRS FONDAMENTAUX - SCIENCES ET TECHNOLOGIES</option><option value="2A05">2A05-PROGRAMMES, ENSEIGNEMENTS ET DIDACTIQUES</option><option value="2A06">2A06-INTERDISCIPLINARITE</option><option value="2A07">2A07-OBJECTIFS, MODALITES ET PRATIQUES D'EVALUATION</option><option value="2A08">2A08-SAVOIRS FONDAMENTAUX - PLAN MATERNELLE</option><option value="2B01">2B01-RECHERCHE-DEVELOPPEMENT-INNOVATION-EXPERIMENTATION</option><option value="2B02">2B02-SCIENCES COGNITIVES ET MECANISMES D'APPRENTISSAGE</option><option value="2B03">2B03-DIFFERENCIATION PEDAGOGIQUE</option><option value="2B04">2B04-OBJECTIFS, MODALITES ET PRATIQUES D'EVALUATION</option><option value="2C01">2C01-ESPRIT CRITIQUE</option><option value="2C02">2C02-EDUCATION AUX MEDIAS ET A L'INFORMATION</option><option value="2C03">2C03-CREATIVITE, COOPERATION, COMMUNICATION</option><option value="2D01">2D01-COMPETENCES PSYCHO-SOCIALES</option><option value="2D02">2D02-LUTTE CONTRE LE DECROCHAGE SCOLAIRE</option><option value="2D03">2D03-COMPREHENSION DES OBSTACLES AUX APPRENTISSAGES</option><option value="2D04">2D04-MOTIVATION</option><option value="2E01">2E01-LUTTE CONTRE LE DECROCHAGE SCOLAIRE</option><option value="2E02">2E02-PSYCHOLOGIE DE L'ADOLESCENT</option><option value="2E03">2E03-TECHNIQUES DE CONDUITES D'ENTRETIEN</option><option value="2E04">2E04-RELATION ECOLE-FAMILLES ET ORIENTATION</option><option value="2E05">2E05-CONTINUITE ECOLE-COLLEGE-LYCEE</option><option value="2E06">2E06-LUTTE CONTRE LES DETERMINISMES DANS L'ORIENTATION</option><option value="2E07">2E07-CONTINUUM LYCEE-UNIVERSITE</option><option value="2E08">2E08-RELATIONS ECOLE-ENTREPRISE</option><option value="2E09">2E09-PARTENARIAT ETAT-REGION</option><option value="2F01">2F01-17 OBJECTIFS DE DEVELOPPEMENT DURABLE</option><option value="2F02">2F02-CULTURE ET DEMARCHE SCIENTIFIQUES</option><option value="2F03">2F03-CIRCUIT DE PRODUCTION DES CONNAISSANCES</option><option value="2F04">2F04-SAVOIRS, OPINIONS, CROYANCES, RAPPORT A LA VERITE</option><option value="2F05">2F05-SOBRIETE NUMERIQUE</option><option value="2G01">2G01-EDUCATION ARTISTIQUE ET CULTURELLE</option><option value="2G02">2G02-CONDUITE DE PROJETS</option><option value="2G03">2G03-COOPERATION EUROPEENNE ET INTERNATIONALE</option><option value="3A01">3A01-CONTINUITE ET ALLIANCES EDUCATIVES</option><option value="3A02">3A02-AUTONOMIE D'ACCES AUX DROITS</option><option value="3A03">3A03-PARCOURS DE FORMATION/D'INSERTION POUR LES JEUNES</option><option value="3A04">3A04-PREVENTION DES VIOLENCES ET DES DERIVES SEXUELLES</option><option value="3A05">3A05-DEVELOPPEMENT DE LA CULTURE DE L'ENGAGEMENT</option><option value="3A06">3A06-ACCOMPAGNEMENT ET SOUTIEN A LA QUALITE EDUCATIVE</option><option value="3A07">3A07-ACCOMPAGNEMENT DES DYNAMIQUES ASSOCIATIVES</option><option value="3A08">3A08-ACCES AU SPORT DES PUBLICS CIBLES</option><option value="3A09">3A09-EDUCATION AUX APTITUDES FONDAMENTALES PAR LE SPORT</option><option value="3A10">3A10-CITOYENNETE ET INTEGRATION PAR LE SPORT</option><option value="3A11">3A11-DEMARCHES ET PRATIQUES DE L'EDUCATION POPULAIRE</option><option value="3A12">3A12-POLITIQUES EN FAVEUR DU SPORT SANTE</option><option value="3A13">3A13-DEV DURABLE EN FAVEUR DES JEUNES ET DU SPORT</option><option value="3B01">3B01-LABO DES PRATIQUES</option><option value="3B02">3B02-EXPERIMENTATION</option><option value="3B03">3B03-SPECIALITES TECHNIQUES ET PEDAGOGIQUES</option><option value="3B04">3B04-DEMARCHES & METHODOLOGIE D'INGENIERIE TERRITORIALE</option><option value="3B05">3B05-COMMUNAUTES APPRENANTES</option><option value="3B06">3B06-ANALYSES DE PRATIQUES</option><option value="3B07">3B07-ENJEUX ET STRATEGIES DES ACTEURS TERRITORIAUX</option><option value="3B08">3B08-PRATIQUES D'EDUCATION POPULAIRE ET POLITIQUES JES</option><option value="3B09">3B09-SUIVI DES CONFERENCES REGIONALES DU SPORT</option><option value="3B10">3B10-DEVELOPPEMENT DE POLITIQUES TERRITORIALES JES</option><option value="3B11">3B11-PORTAGE DE PROJETS SPORTIFS COMPLEXES</option><option value="3B12">3B12-FORMATION DES ACTEURS LOCAUX DU SPORT</option><option value="3B13">3B13-CERTIFICATION DES CENTRES DE FORMATION EN SPORT</option><option value="3B14">3B14-FORMATION DES CADRES BENEVOLES ET PROFESSIONNELS</option><option value="3B15">3B15-STRUCTURATION, PROFESSIONNALISATION - ASSOCIATIONS</option><option value="3C01">3C01-INSPECTION CONTROLE EVALUATION JES</option><option value="3C02">3C02-ACCOMPAGNEMENT ET OUTILS COLLABORATIFS</option><option value="3C03">3C03-ACCOMPAGNEMENT DES SPORTIFS ET CADRES HAUT NIVEAU</option><option value="3C04">3C04-ACCOMPAGNEMENT DES ACTEURS LOCAUX JES</option><option value="3C05">3C05-MANAGEMENT COORDINATION D'EQUIPES SPORTIVES</option><option value="3C06">3C06-ENTRAINEMENT SPORTIF ET PERFORMANCE</option><option value="3C07">3C07-PILOTAGE ET OPTIMISATION DE LA HAUTE PERFORMANCE</option><option value="3C08">3C08-DETECTION DES TALENTS</option><option value="3C09">3C09-DIRECTION ET EVALUATION DES STRUCTURES LABELLISEES</option><option value="4A01">4A01-ENVIRONNEMENT DE TRAVAIL</option><option value="4A02">4A02-ACTEURS ET MISSIONS</option><option value="4A03">4A03-REFERENTIELS</option><option value="4B01">4B01-RECUEIL / ANALYSE DES BESOINS</option><option value="4B02">4B02-DIAGNOSTIC ET ACCOMPAGNEMENT</option><option value="4C01">4C01-PREPARATION CONCOURS CAPES, CAPET, CAPEPS, CAPLP</option><option value="4C02">4C02-PREPARATION CONCOURS AGREGATION</option><option value="4C03">4C03-PREPARATION CONCOURS CPE</option><option value="4C04">4C04-PREPARATION CONCOURS PSYEN</option><option value="4C05">4C05-PREPARATION CONCOURS ADMINISTRATION</option><option value="4C06">4C06-PREPARATION CONCOURS SANTE, SOCIAL</option><option value="4C07">4C07-PREPARATION CONCOURS ITRF</option><option value="4C08">4C08-PREPARATION CONCOURS ENCADREMENT</option><option value="4C09">4C09-DPC DES PERSONNELS DE SANTE</option><option value="4C10">4C10-BILANS DE COMPETENCES, VAE, CPF, CFP</option><option value="4C11">4C11-ANIMATION D'UN RESEAU</option><option value="4C12">4C12-ESPACES DE DEVELOPPEMENT PROFESSIONNEL</option><option value="4D01">4D01-CONSEIL ET ACCOMPAGNEMENT</option><option value="4D02">4D02-PERSONNALISATION</option><option value="4D03">4D03-DIAGNOSTIC DE MOBILITE</option><option value="4E01">4E01-CULTURE JURIDIQUE DROIT DU TRAVAIL</option><option value="4E02">4E02-BIEN-ETRE</option><option value="4E03">4E03-LUTTE CONTRE LES STEREOTYPES</option><option value="4E04">4E04-PROCESSUS DE RECRUTEMENT</option><option value="4E05">4E05-POLITIQUE DE VIVIER</option><option value="4F01">4F01-ANALYSE DE L'ACTIVITE PROFESSIONNELLE</option><option value="4F02">4F02-OUTILS ET METHODES D'INNOVATION</option><option value="4F03">4F03-DEMARCHE DESIGN</option><option value="4F04">4F04-APPRENDRE PAR LA RECHERCHE</option><option value="4F05">4F05-RECHERCHE ACTION</option><option value="4G01">4G01-COMMUNAUTES DE PRATIQUES</option><option value="4G02">4G02-CO-DEVELOPPEMENT</option><option value="4G03">4G03-INTELLIGENCE COLLECTIVE</option><option value="4G04">4G04-DEMARCHE DESIGN</option><option value="4G05">4G05-ANIMATION DE RESEAU</option><option value="4H01">4H01-ECO-CITOYENNETE : ECONOMIE, ENVIRONNEMENT, SOCIETE</option><option value="4H02">4H02-CIRCUIT DE PRODUCTION DES CONNAISSANCES</option><option value="4I01">4I01-MOBILITE GEOGRAPHIQUE ET DEVELOPPEMENT PRO</option><option value="4I02">4I02-VALORISATION DES PARCOURS</option><option value="4I03">4I03-INTERCULTURALITE</option><option value="4J01">4J01-BIEN-ETRE</option><option value="4J02">4J02-PROCESS PARTICIPATIFS ET DE CO-CONSTRUCTION</option><option value="4J03">4J03-PROCESS DE VALIDATION</option><option value="4J04">4J04-PREVENTION DES RISQUES PSYCHO-SOCIAUX</option><option value="4J05">4J05-SANTE ET SECURITE AU TRAVAIL</option><option value="5A01">5A01-ANIMATION D'UN COLLECTIF DE TRAVAIL</option><option value="5A02">5A02-RESPONSABILISATION DES EQUIPES ET DELEGATION</option><option value="5A03">5A03-MOTIVATION ET VALORISATION DE SON EQUIPE</option><option value="5A04">5A04-PREVENTION DES RISQUES PSYCHO-SOCIAUX</option><option value="5A05">5A05-REALISATION DE L'ENTRETIEN ANNUEL D'EVALUATION</option><option value="5A06">5A06-DEVELOPPEMENT PROFESSIONNEL DES COLLABORATEURS</option><option value="5A07">5A07-PREVENTION ET GESTION DES CONFLITS</option><option value="5A08">5A08-PILOTAGE PEDAGOGIQUE</option><option value="5B01">5B01-CREATIVITE, COOPERATION, COMMUNICATION</option><option value="5B02">5B02-CONDUITE DE PROJETS DE TRANSFORMATION</option><option value="5B03">5B03-RENFORCEMENT DE L'EXPERTISE BUDGETAIRE</option><option value="5B04">5B04-RENFORCEMENT DE L'EXPERTISE JURIDIQUE</option><option value="5B05">5B05-CULTURE DE L'EVALUATION DES POLITIQUES PUBLIQUES</option><option value="5B06">5B06-CULTURE DU DIALOGUE SOCIAL ET DE LA NEGOCIATION</option><option value="5B07">5B07-PREVENTION ET GESTION DE CRISE</option><option value="5B08">5B08-DEMARCHE QUALITE ET MAITRISE DES RISQUES</option><option value="5C01">5C01-LUTTE CONTRE LES STEREOTYPES</option><option value="5C02">5C02-CONNAISSANCES JURIDIQUES EN DROIT DU TRAVAIL</option><option value="5C03">5C03-PRATIQUES MANAGERIALES NON DISCRIMINANTES</option><option value="5C04">5C04-LUTTE CONTRE LES VIOLENCES SEXISTES ET SEXUELLES</option><option selected="selected" value="6A01">6A01-MAITRISE DE L'ENVIRONNEMENT NUMERIQUE DE TRAVAIL</option><option value="6A02">6A02-CADRE DE REFERENCE DES COMPETENCES NUMERIQUES</option><option value="6A03">6A03-USAGE ET PARTAGE DES COMMUNS NUMERIQUES</option><option value="6A04">6A04-CONTINUITE ADMINISTRATIVE ET PEDAGOGIQUE</option><option value="6B01">6B01-COMPETENCES DU XXIE SIECLE</option><option value="6B02">6B02-IDENTITE ET SECURITE NUMERIQUES, RGPD</option><option value="6B03">6B03-CITOYENNETE NUMERIQUE</option><option value="6B04">6B04-INCLUSION NUMERIQUE</option><option value="6B05">6B05-DONNEES, ALGORITHMES ET CODES SOURCES</option><option value="6C01">6C01-NUMERIQUE ET APPRENTISSAGE</option><option value="6C02">6C02-HYBRIDATION</option><option value="6C03">6C03-SCENARISATION</option><option value="6C04">6C04-PRATIQUES COLLABORATIVES NUMERIQUES</option><option value="6C05">6C05-COMMUNICATION NUMERIQUE ET ACCESSIBILITE DE L'INFO</option><option value="6C06">6C06-INTELLIGENCE ARTIFICIELLE</option><option value="7A01">7A01-FRANCAIS ET MAITRISE DE LA LANGUE</option><option value="7A02">7A02-MATHEMATIQUES</option><option value="7A03">7A03-SCIENCES ET TECHNOLOGIE</option><option value="7A04">7A04-LANGUES VIVANTES</option><option value="7A05">7A05-HUMANITES</option><option value="7A06">7A06-ENSEIGNEMENTS ARTISTIQUES</option><option value="7A07">7A07-EDUCATION PHYSIQUE ET SPORTIVE</option><option value="7A08">7A08-PREPARATION AU CAPPEI</option><option value="7A09">7A09-BESOINS EDUCATIFS PARTICULIERS</option><option value="7A10">7A10-CONCEPTION UNIVERSELLE DES APPRENTISSAGES</option><option value="7A11">7A11-PREPARATION A L'ENTREE EN CLASSE DE SECONDE</option><option value="7A12">7A12-FORMATION EN ENTREPRISE</option><option value="7A13">7A13-QUESTIONS ET POLITIQUES MEMORIELLES</option><option value="7A14">7A14-EVAR PREMIER DEGRE</option><option value="7A15">7A15-EVARS SECOND DEGRE</option></optgroup></select>                    </div>
+    
+    <div class="row" id="div-co_budg"><label for="Gmodu_co_budg" class="required">Code budgétaire <span class="required">*</span></label><select data-required="1" data-field="co_budg" name="Gmodu[co_budg]" id="Gmodu_co_budg">
+<option value="">Faire un choix</option>
+<option value="ADA">ADA-ADAPTATION A L&#039;EMPLOI</option>
+<option value="AMI">AMI-APPEL A MANIFESTATION D INTERET</option>
+<option value="CERT">CERT-CAFFA CAFIPEMF CAPPEI</option>
+<option value="CTEN">CTEN-CONTRACTUELS</option>
+<option value="INGF">INGF-COORDINATION FORMATION</option>
+<option value="ESST">ESST-ENSEIGNER LA SANTE ET LA SECURITE AU TRAVAIL</option>
+<option value="FIL">FIL-FIL</option>
+<option value="FDF">FDF-FORMATION DE FORMATEURS EAFC</option>
+<option value="FDT">FDT-FORMATION DES TUTEURS</option>
+<option value="FIDE">FIDE-FORMATION INITIALE DES ENSEIGNANTS</option>
+<option value="FDIS">FDIS-FORMATIONS DISCIPLINAIRES METIERS</option>
+<option value="FTRA" selected="selected">FTRA-FORMATIONS TRANSVERSALES</option>
+<option value="PNR">PNR-PLAN NATIONAL REFORMES</option>
+<option value="PRE">PRE-PREPARATIONS CONCOURS</option>
+<option value="SST">SST-SANTE, SECURITE AU TRAVAIL</option>
+<option value="SIA">SIA-SERVICE INTERCADEMIQUE FORMATION ENCADREMENT</option>
+<option value="T12">T12-TITULAIRES 1ERE ET 2EME ANNEE</option>
+</select></div>    
+    <div class="row" id="div-co_form">
+        <label for="Gmodu_co_form" class="required">Modalité <span class="required">*</span></label>        <select name="Gmodu[co_form]" id="Gmodu_co_form">
+<option value="">Faire un choix</option>
+<option value="L">ANIMATION</option>
+<option value="N">AUTO-FORMATION</option>
+<option value="K">AUTRES</option>
+<option value="H">CONFERENCE</option>
+<option value="F">GROUPE DE TRAVAIL</option>
+<option value="G">PARCOURS INDIVIDUALISE</option>
+<option value="A">REUNION</option>
+<option value="E">SEMINAIRE</option>
+<option value="B" selected="selected">STAGE</option>
+<option value="M">TUTORAT</option>
+</select>            </div>
+    
+    </fieldset><!-- fin description -->
+
+    <fieldset>
+    <legend>Organisation</legend>
+    
+    <div class="row" id="div-co_regr">
+    <label for="Gmodu_co_regr" class="required">Niveau de déploiement <span class="required">*</span></label>    <input id="ytGmodu_co_regr" name="Gmodu[co_regr]" type="hidden" value="" /><span>ACADEMIQUE</span>&nbsp;<input checked="checked" data-co_regr="ACADEM" id="Gmodu_co_regr_ACADEM" value="ACADEM" type="radio" name="Gmodu[co_regr]"  data-cout="click" />&nbsp;&nbsp;&nbsp;&nbsp;<span>CIRCONSCRIPTIONS</span>&nbsp;<input data-co_regr="CIRCO" id="Gmodu_co_regr_CIRCO" value="CIRCO" type="radio" name="Gmodu[co_regr]"  data-cout="click" />&nbsp;&nbsp;&nbsp;&nbsp;<span>FORMATION DEPARTEMENTALE</span>&nbsp;<input data-co_regr="DEPART" id="Gmodu_co_regr_DEPART" value="DEPART" type="radio" name="Gmodu[co_regr]"  data-cout="click" />&nbsp;&nbsp;&nbsp;&nbsp;<span>HYBRIDE/FAD</span>&nbsp;<input data-co_regr="FOAD" id="Gmodu_co_regr_FOAD" value="FOAD" type="radio" name="Gmodu[co_regr]"  data-cout="click" />&nbsp;&nbsp;&nbsp;&nbsp;<span>RESEAU ECLORE</span>&nbsp;<input data-co_regr="ECLORE" id="Gmodu_co_regr_ECLORE" value="ECLORE" type="radio" name="Gmodu[co_regr]"  data-cout="click" />&nbsp;&nbsp;&nbsp;&nbsp;        </div>
+        
+    <div class="row">
+        <script>$(function(){$("#perim-nregr-CIRCO").multipleSelect({placeholder: "Préciser le choix", filter: true, countSelected: "# sur %", selectAllText: "Tout", allSelected: "Tout", minimumCountSelected: 0, width: 200, maxHeight: 300});$("#perim-nregr-CIRCO").next().hide();$("#perim-nregr-CIRCO").multipleSelect("disable");});</script><select multiple="multiple" name="gmoduperimetres[]" id="perim-nregr-CIRCO"><option value="1617">IEN ANGOULEME EST</option><option value="1615">IEN ANGOULEME ET ASH</option><option value="1620">IEN ANGOULEME NORD</option><option value="1618">IEN ANGOULEME SUD</option><option value="1633">IEN ASH</option><option value="1624">IEN AUNIS NORD ATLANTIQUE</option><option value="1632">IEN AUNIS SUD ATLANTIQUE</option><option value="1640">IEN BRESSUIRE</option><option value="1616">IEN CHARENTE PREELEMENTAIRE</option><option value="1643">IEN CHATELLERAULT</option><option value="1621">IEN COGNAC</option><option value="1619">IEN CONFOLENS</option><option value="1628">IEN JONZAC</option><option value="1631">IEN LA ROCHELLE OUEST</option><option value="1630">IEN LA ROCHELLE SUD</option><option value="1629">IEN LE CHAPUS</option><option value="1644">IEN LENCLOITRE NORD VIENNE</option><option value="1639">IEN MARAIS ET PREELEMENTAIRE</option><option value="1634">IEN MELLE</option><option value="1646">IEN MONTMORILLON SUD VIENNE</option><option value="1638">IEN NIORT</option><option value="1636">IEN NIORT ST MAIXENT</option><option value="1637">IEN PARTHENAY</option><option value="1648">IEN POITIERS EST</option><option value="1645">IEN POITIERS NORD</option><option value="1647">IEN POITIERS OUEST</option><option value="1641">IEN POITIERS SUD</option><option value="1627">IEN ROCHEFORT</option><option value="1625">IEN ROYAN</option><option value="1623">IEN SAINT JEAN D'ANGELY</option><option value="1626">IEN SAINTES</option><option value="1622">IEN SDEI</option><option value="1635">IEN THOUARS</option><option value="1642">IEN VIENNE ASH</option></select>    </div>
+
+    <!-- Catalogues -->
+    <div class="row">
+        <label for="Gmodu_cataloguesForm" class="required">Catalogues <span class="required">*</span></label>        <select multiple="multiple" name="Gmodu[cataloguesForm][]" id="cataloguesForm">
+            <option selected value="1">Collèges</option><option selected value="2">Lycées</option><option selected value="3">Lycées professionnels</option><option value="4">Écoles</option><option value="5">ATSS</option><option value="6">Encadrement</option>        </select>
+            </div>
+    
+        
+    <div class="row">
+        <div class="col-md-4">
+            <div class="row" id="div-duree_prev">
+                <label for="Gmodu_duree_prev" class="required">Durée formation en présentiel (heures) <span class="required">*</span></label>                <input data-cout="change" name="Gmodu[duree_prev]" id="Gmodu_duree_prev" type="text" value="0" />                            </div>
+        </div>
+    
+        <div class="col-md-8">
+            <div class="row" id="div-duree_foad">
+                <label class="inline-label required" for="Gmodu_duree_foad">Durée formation à distance (heures) <span class="required">*</span></label>                                <div class="clear-both"><input data-cout="change" name="Gmodu[duree_foad]" id="Gmodu_duree_foad" type="text" value="9" /></div>                            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-3">
+            <div class="row" id="div-nb_place_prev">
+                <label for="Gmodu_nb_place_prev" class="required">Nombre de places total <span class="required">*</span></label>                <p><small>Attention, pour les stages collectifs : nombre de places pour <b>un établissement</b></small></p>                <input data-cout="change" name="Gmodu[nb_place_prev]" id="Gmodu_nb_place_prev" type="text" value="600" />                            </div>
+        </div>
+        <div class="col-md-1" style="padding-top: 32px;">
+        </div>
+        <div class="col-md-4">
+            <div class="row" id="div-nb_groupes">
+                <label for="Gmodu_nb_groupes" class="required">Nombre total de formateurs prévus <span class="required">*</span></label>                <p><small>Attention, pour les stages collectifs : nombre total de formateurs pour <b>un établissement</b></small></p>                <input data-cout="change" name="Gmodu[nb_groupes]" id="Gmodu_nb_groupes" type="text" value="1" />                            </div>
+        </div>
+    </div>
+    
+        <div class="row" id="div-nb_max_stages_collectifs" style="display: none;">
+        <label for="Gmodu_nb_max_stages_collectifs" class="required">Nombre de stages maximum que vous pensez pouvoir assurer <span class="required">*</span></label>        <input data-required="1" data-field="nb_max_stages_collectifs" size="7" maxlength="7" name="Gmodu[nb_max_stages_collectifs]" id="Gmodu_nb_max_stages_collectifs" type="text" />            </div>
+        
+        
+        <div class="row" id="div-lieu_prevu">
+        <label for="Gmodu_lieu_prevu">Lieu prévu</label>        <input size="60" maxlength="255" name="Gmodu[lieu_prevu]" id="Gmodu_lieu_prevu" type="text" value="" />            </div>
+        
+    <fieldset>
+    <legend>Période d'organisation (facultatif)</legend>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="row" id="div-date_debut">
+                <label for="Gmodu_date_debut">Date de début (jj/mm/aaaa)</label>                <input id="Gmodu_date_debut" type="text" value="" name="Gmodu[date_debut]" />                            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="row" id="div-date_fin">
+                <label for="Gmodu_date_fin">Date de fin (jj/mm/aaaa)</label>                <input id="Gmodu_date_fin" type="text" value="" name="Gmodu[date_fin]" />                            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="row" id="div-precisions_dates">
+                <label for="Gmodu_precisions_dates">Précisions sur les dates</label>                <input size="60" maxlength="255" name="Gmodu[precisions_dates]" id="Gmodu_precisions_dates" type="text" value="" />                            </div>
+        </div>
+    </div>
+    </fieldset>
+    
+    <div><small><em>Coût calculé : <span id='calcul_cout_logistique'></span> euro(s) (budget de fonctionnement)</em></small></div>
+    
+    </fieldset><!-- fin organisation -->
+    
+    <fieldset>
+    <legend>Rémunération</legend>
+    
+    <div class="row" id="div-cout_prestation_perso">
+        <label for="Gmodu_cout_prestation_perso">Intervenants / Tutorat</label>        <p><small>Le coup de rémunération est calculé automatiquement en bas de cette page. Vous pouvez le saisir manuellement s'il est différent de celui calculé.<br><strong>Si le formateur est déchargé, veuillez saisir 0 euros.</strong></small></p>
+        <div class="clear-both"><input size="7" maxlength="7" data-cout="change" name="Gmodu[cout_prestation_perso]" id="Gmodu_cout_prestation_perso" type="text" /></div>        <div><small><em>Coût calculé : <span id='calcul_cout_prestation_perso'></span> euro(s) (budget de vacation)</em></small></div>
+            </div>
+    
+    <div class="row" id="div-convention">
+        <label class="inline-label" for="Gmodu_convention">Convention</label>                <div class="clear-both"><input id="ytGmodu_convention" type="hidden" value="0" name="Gmodu[convention]" /><input data-cout="click" name="Gmodu[convention]" id="Gmodu_convention" value="1" type="checkbox" /></div>            </div>
+
+    <div class="row" id="div-orga_convention">
+        <label for="Gmodu_orga_convention" class="required">Organisme si convention <span class="required">*</span></label>        <input data-required="1" data-field="orga_convention" size="60" maxlength="255" name="Gmodu[orga_convention]" id="Gmodu_orga_convention" type="text" value="" />            </div>
+    
+    <div class="row" id="div-cout_convention_perso">
+        <label for="Gmodu_cout_convention_perso">Coût organisme</label>        <p><small>Le coût est calculé automatiquement en bas de cette page. Vous pouvez le saisir manuellement s'il est différent de celui calculé</small></p>
+        <input size="7" maxlength="7" data-cout="change" name="Gmodu[cout_convention_perso]" id="Gmodu_cout_convention_perso" type="text" />        <div><small><em>Coût calculé : <span id='calcul_cout_organisme_perso'></span> euro(s) (budget de fonctionnement)</em></small></div>
+            </div>
+    
+    </fieldset><!-- Fin rémunération -->
+    
+    <fieldset>
+    <legend>Frais exceptionnels</legend>
+    <div class="row" id="div-cout_p_excep">
+        <label class="inline-label" for="Gmodu_cout_p_excep">Coût exceptionnel</label>        &nbsp;&nbsp;<a href="#" data-toggle="popover" data-content="<ul><li>Achat de consommables liés à la mise en place de l'action</li><li>Intervention de personnel extérieur à l'académie</li></ul>"><span class="fa-stack"><i class="fa fa-circle-thin fa-stack-2x fa-margin-top"></i><i class="fa fa-question fa-stack-1x fa-margin-top"></i></span></a>        <div class="clear-both"><input size="7" maxlength="7" data-cout="change" name="Gmodu[cout_p_excep]" id="Gmodu_cout_p_excep" type="text" /></div>        <div><small><em>Coût calculé : <span id='calcul_cout_exceptionnel'></span> euro(s) (budget de fonctionnement)</em></small></div>
+            </div>
+    </fieldset><!-- fin frais exceptionnels -->
+    
+    <fieldset>
+        <legend>Remarques</legend>
+        <div class="row" id="div-remarques">
+            <label for="Gmodu_remarques">Remarques</label>            <textarea rows="6" cols="50" name="Gmodu[remarques]" id="Gmodu_remarques"></textarea>                    </div>
+    </fieldset>
+    
+        <fieldset>
+        <legend>EAFC</legend>
+        <div class="row" id="div-commentaire_dp">
+            <label for="Gmodu_commentaire_dp">Commentaire EAFC</label>            <textarea rows="6" cols="50" name="Gmodu[commentaire_dp]" id="Gmodu_commentaire_dp"></textarea>                    </div>
+    </fieldset>
+        
+        <div id="cout_previsionnel" class="" style="margin:15px; padding:15px;">
+        <h3>Coût prévisionnel (Responsable : SRANE FORMATION)</h3>
+        <p><strong><span id="erreurCoutPrevisionnel"></span></strong></p>
+        <p>Coût en vacation : <span id="coutVac"></span> euro(s)</p>
+        <p>Coût de fonctionnement : <span id="coutFonc"></span> euro(s)</p>
+        <p>Disponible en vacation : <span id="vacDispo"></span> euro(s)</p>
+        <p>Disponible en fonctionnement : <span id="foncDispo"></span> euro(s)</p>
+    </div><!-- FIN affichage du cout prévisionnel -->
+    
+    <div class="row buttons">
+        <input class="btn btn-primary" type="submit" name="yt0" value="Enregistrer" />        <input id="btn-annuler" class="btn btn-default" data-return-url="/sofia/nthem/treeview" name="yt1" type="button" value="Fermer" />    </div>
+
+</form></div><!-- form -->
+            </div><!-- content -->
+            <footer>
+                Académie de Poitiers - Sofia            </footer><!-- footer -->
+        </div><!-- shadow -->
+
+    <script type="text/javascript" src="/sofia/assets/ead43241/jui/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/sofia/assets/ead43241/jui/js/jquery-ui-i18n.min.js"></script>
+<script type="text/javascript">
+/*<![CDATA[*/
+jQuery(function($) {
+jQuery('#Gmodu_date_debut').datepicker(jQuery.extend({showMonthAfterYear:false},jQuery.datepicker.regional['fr'],{'showAnim':'fold','autoSize':true}));
+jQuery('#Gmodu_date_fin').datepicker(jQuery.extend({showMonthAfterYear:false},jQuery.datepicker.regional['fr'],{'showAnim':'fold','autoSize':true}));
+$(function(){ $("#select-year").on("change", function(){$.ajax({url: baseUrl+"/administration/changeYear/year/"+$(this).val()}).done(function(){self.location.reload();});;});});
+});
+/*]]>*/
+</script>
+</body>
+</html>
