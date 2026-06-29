@@ -1,0 +1,2 @@
+import { motion } from 'framer-motion';import type { ButtonHTMLAttributes,ReactNode } from 'react';
+export function StatefulButton({children,className='',...props}:ButtonHTMLAttributes<HTMLButtonElement>&{children:ReactNode}){return <motion.button whileHover={{y:-1}} whileTap={{scale:.98}} className={`rounded-xl border border-slate-200 bg-slate-950 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-slate-800 disabled:opacity-50 ${className}`} {...props}>{children}</motion.button>}
