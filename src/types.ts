@@ -1,0 +1,3 @@
+export type LegacyCourse={id?:string;title?:string;objectif?:string;contenu?:string;effectif?:number|string;duree?:number|string;pres?:number|string;dist?:number|string;frais?:number|string;cost?:number;cout?:number;niveau?:string;niveau2?:string;niveau3?:string;candidature?:string;priority?:string;intervenants?:unknown[];status?:string;comment?:string};
+export type QualityIssue={severity:'warning'|'error'|'info';title:string;detail:string;courseTitle?:string};
+export type LegacySnapshot={courses:LegacyCourse[];pathways:unknown[];planTitle?:string;deploymentLoaded:boolean;generatedHtml:boolean;lastSavedAt?:string};
